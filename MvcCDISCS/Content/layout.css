@@ -15,7 +15,7 @@ img /* img elements 图片元素 */ {
 }
 /** 设置默认字体 **/
 body, button, input, select, textarea {
-    font-family: "宋体",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "黑体",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
 }
 
@@ -95,7 +95,7 @@ ul#mainnav {
 
         ul#mainnav li a {
             font-size: 1.2em;
-            font-weight: bold;
+            /*font-weight: bold;*/
             color: white;
             display: block;
             padding: 5px 15px;
@@ -108,13 +108,97 @@ ul#mainnav {
 
             ul#mainnav li a:hover {
                 /*background-color: #014170;*/
-                border: 2px solid #999;
+                border: 2px solid #e4e4e4;
             }
 
+            ul#mainnav li a.selected {
+                border: 2px solid #333;
+            }
 /*main部分设置*/
 #main .mainbody {
     border-left: 3px solid #e4e4e4;
     border-right: 3px solid #e4e4e4;
-    background-color:white;
-    padding:10px;
+    background-color: white;
+    padding: 10px 10px 25px 10px;
 }
+
+/*
+    footer 部分设置
+*/
+#footer {
+    background-color: #EFEFEF;
+}
+
+#footerlink {
+    padding: 15px 0;
+    background-color: #989898;
+}
+
+    #footerlink ul {
+        float: left;
+        overflow: hidden;
+    }
+
+        #footerlink ul li {
+            float: left;
+        }
+
+            #footerlink ul li a {
+                color: #333;
+                display: block;
+                text-align: center;
+                padding: 5px;
+                border-right: 1px solid #666;
+            }
+
+                #footerlink ul li a:hover {
+                    color: white;
+                }
+
+    #footerlink p {
+        color: #333;
+        float: right;
+        font-size: 0.9em;
+    }
+
+        #footerlink p select[name='friendlink'] {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        #footerlink p input[type='button'] {
+            width: 35px;
+            padding: 3px;
+            color: #333;
+        }
+
+#footerbottom {
+    padding: 15px 15px 25px 15px;
+}
+
+    #footerbottom ul {
+        float: left;
+    }
+
+        #footerbottom ul li {
+            /*font-weight: bold;*/
+            font-size: 0.9em;
+            color: #333;
+            padding: 8px 0;
+        }
+
+    #footerbottom div.bcode {
+        float: right;
+    }
+
+        #footerbottom div.bcode p {
+            font-size: 0.8em;
+            text-align: center;
+            color: #999;
+        }
+
+        #footerbottom div.bcode img {
+            height: 175px;
+            width: 175px;
+        }

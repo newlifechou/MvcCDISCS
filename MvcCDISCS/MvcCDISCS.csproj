@@ -202,6 +202,7 @@
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\aboutphoto.jpg" />
+    <Content Include="Images\BCode.jpg" />
     <Content Include="Images\body_bg.jpg" />
     <Content Include="Images\categoryimage.jpg" />
     <Content Include="Images\left-arrow.png" />

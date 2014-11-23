@@ -11,7 +11,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <!--load more css here-->
-    @RenderSection("cssmore",required:false)
+    @RenderSection("cssmore", required: false)
 </head>
 <body>
     <!--header-->
@@ -19,7 +19,7 @@
         <div class="wraper">
             <img id="logo" src="~/Images/logo.gif" alt="CDISCS" />
             <ul id="mainnav">
-                <li><a href="#">首页</a></li>
+                <li><a href="#" class="selected">首页</a></li>
                 <li><a href="#">关于我们</a></li>
                 <li><a href="#">产品中心</a></li>
                 <li><a href="#">技术服务</a></li>
@@ -31,7 +31,7 @@
     <div id="main">
         <div class="wraper mainbody">
             <!--slide-->
-            @RenderSection("slide",required:false)
+            @RenderSection("slide", required: false)
 
             <!--mainbody-->
             @RenderBody()
@@ -39,7 +39,41 @@
     </div>
     <!--footer-->
     <div id="footer">
-
+        <div id="footerlink">
+            <div class="wraper">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">产品中心</a></li>
+                    <li><a href="#">技术服务</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+                <p>
+                    友情链接:
+                    <select name="friendlink">
+                        <option value="1">— —直属单位— —</option>
+                        <option value="2">Test2</option>
+                        <option value="3">Test3</option>
+                        <option value="4">Test4</option>
+                    </select>
+                    <input type="button" value="Go" />
+                </p>
+            </div>
+        </div>
+        <div class="wraper" id="footerbottom">
+            <ul>
+                <li>成都成航安全系统有限公司</li>
+                <li>电话：028-8667 9766</li>
+                <li>邮件：844120120@qq.com</li>
+                <li>地址：四川省成都市锦江区静沙南路18号沙河中心</li>
+                <li>蜀ICP备07001898</li>
+                <li>版权所有&copy; 2014  成都成航安全系统有限责任公司</li>
+            </ul>
+            <div class="bcode">
+                <p>手机扫描二维码添加联系方式</p>
+                <img src="~/Images/BCode.jpg" alt="bcode"/>
+            </div>
+        </div>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
