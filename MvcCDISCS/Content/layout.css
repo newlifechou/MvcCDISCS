@@ -104,6 +104,7 @@ ul#mainnav {
             height: 48px;
             line-height: 48px;
             text-align: center;
+            margin-right:10px;
         }
 
             ul#mainnav li a:hover {

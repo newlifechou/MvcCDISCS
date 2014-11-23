@@ -59,6 +59,11 @@ ul.categorylist li {
     margin-bottom: 5px;
 }
 
+    /*js mouseover style*/
+    ul.categorylist li.mo {
+        background-color: #DBDADA;
+    }
+
     ul.categorylist li img {
         width: 90px;
         height: 80px;
@@ -91,19 +96,22 @@ ul.categorylist li {
 }
 
 #about {
-    padding: 10px;
 }
 
-    #about img {
-        margin: 0 auto;
-        margin-bottom: 20px;
+    #about div {
+        padding: 10px;
     }
 
-    #about p {
-        text-indent: 2em;
-        font-size: 0.9em;
-        line-height: 1.8;
-    }
+        #about div img {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        #about div p {
+            text-indent: 2em;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
 
 #productslide {
     padding: 15px 10px;
