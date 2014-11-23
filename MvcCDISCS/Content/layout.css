@@ -1,0 +1,120 @@
+﻿/*
+    全局处理
+*/
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, div,
+blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img /* img elements 图片元素 */ {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+/** 设置默认字体 **/
+body, button, input, select, textarea {
+    font-family: "宋体",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+em {
+    font-style: normal;
+}
+/** 重置列表元素 **/
+ul, ol {
+    list-style: none;
+}
+/** 重置超链接元素 **/
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+    a:hover {
+        color: #F40;
+    }
+/** 重置图片元素 **/
+img {
+    /*图片必须设置为block，否则会有一个默认边距*/
+    display: block;
+}
+/** 重置表格元素 **/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+    设置主要部分
+*/
+
+body {
+    background: url("../Images/body_bg.jpg");
+    /*一直显示滚动条*/
+    overflow-y: scroll;
+}
+
+#header, #main, #footer {
+    width: 1345px;
+    /*居中于body的中央*/
+    margin: 0 auto;
+}
+
+
+/*header部分设置*/
+#header {
+    background-color: #0767B2;
+    padding: 9px 0;
+}
+
+/*center wraper*/
+.wraper {
+    width: 1108px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#logo {
+    float: left;
+}
+
+ul#mainnav {
+    overflow: hidden;
+    float: right;
+}
+
+    ul#mainnav li {
+        float: left;
+    }
+
+        ul#mainnav li a {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            display: block;
+            padding: 5px 15px;
+            border: 2px solid #0767B2;
+            border-radius: 5px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+        }
+
+            ul#mainnav li a:hover {
+                /*background-color: #014170;*/
+                border: 2px solid #999;
+            }
+
+/*main部分设置*/
+#main .mainbody {
+    border-left: 3px solid #e4e4e4;
+    border-right: 3px solid #e4e4e4;
+    background-color:white;
+    padding:10px;
+}

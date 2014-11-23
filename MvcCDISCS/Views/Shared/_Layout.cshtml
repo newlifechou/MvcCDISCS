@@ -3,13 +3,44 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="xs.zhou" />
+    <!--designed by xs.zhou-->
+    <!--email:newlifecou@outlook.com-->
+    <!--2014-11-25-->
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <!--load more css here-->
+    @RenderSection("cssmore",required:false)
 </head>
 <body>
-    @RenderBody()
+    <!--header-->
+    <div id="header">
+        <div class="wraper">
+            <img id="logo" src="~/Images/logo.gif" alt="CDISCS" />
+            <ul id="mainnav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">产品中心</a></li>
+                <li><a href="#">技术服务</a></li>
+                <li><a href="#">联系方式</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--main-->
+    <div id="main">
+        <div class="wraper mainbody">
+            <!--slide-->
+            @RenderSection("slide",required:false)
 
+            <!--mainbody-->
+            @RenderBody()
+        </div>
+    </div>
+    <!--footer-->
+    <div id="footer">
+
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
