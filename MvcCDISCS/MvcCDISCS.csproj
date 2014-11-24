@@ -142,8 +142,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\basicinfo.cs" />
+    <Compile Include="Models\productcategory.cs" />
     <Compile Include="Models\flash.cs" />
     <Compile Include="Models\morebasicinfo.cs" />
+    <Compile Include="Models\product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\zh-cn.Designer.cs">
       <AutoGen>True</AutoGen>
