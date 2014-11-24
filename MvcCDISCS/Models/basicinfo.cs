@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MvcCDISCS.Models
 {
+    /// <summary>
+    /// 基本信息
+    /// </summary>
     public class basicinfo
     {
         public int Id { get; set; }
