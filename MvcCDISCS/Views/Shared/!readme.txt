@@ -1,0 +1,2 @@
+﻿为避免和Title属性冲突，将layout页面的Viewbag.Title改为Viewbag.PageTitle
+整个网站约定此规则
