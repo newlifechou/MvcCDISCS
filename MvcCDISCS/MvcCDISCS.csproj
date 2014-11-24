@@ -141,6 +141,7 @@
     <Compile Include="Models\admin.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\basicinfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\zh-cn.Designer.cs">
       <AutoGen>True</AutoGen>
