@@ -143,6 +143,7 @@
     </Compile>
     <Compile Include="Models\basicinfo.cs" />
     <Compile Include="Models\feedback.cs" />
+    <Compile Include="Models\friendlink.cs" />
     <Compile Include="Models\news.cs" />
     <Compile Include="Models\productcategory.cs" />
     <Compile Include="Models\flash.cs" />
