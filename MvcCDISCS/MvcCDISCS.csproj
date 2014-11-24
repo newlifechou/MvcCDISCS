@@ -225,6 +225,7 @@
     <Content Include="Images\productphoto.jpg" />
     <Content Include="Images\right-arrow.png" />
     <Content Include="Images\slide.jpg" />
+    <Content Include="ReadMe.txt" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
