@@ -142,6 +142,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\basicinfo.cs" />
+    <Compile Include="Models\career.cs" />
     <Compile Include="Models\feedback.cs" />
     <Compile Include="Models\friendlink.cs" />
     <Compile Include="Models\log.cs" />
