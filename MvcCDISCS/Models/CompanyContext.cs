@@ -11,6 +11,11 @@ namespace MvcCDISCS.Models
     /// </summary>
     public class CompanyContext : DbContext
     {
+        public CompanyContext()
+            : base("name=DefaultConnection")
+        {
+
+        }
         //set all the dbset
         public DbSet<admin> admins { get; set; }
         public DbSet<basicinfo> basicinfos { get; set; }

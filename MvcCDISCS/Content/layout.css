@@ -101,19 +101,20 @@ ul#mainnav {
             color: white;
             display: block;
             padding: 5px 15px;
+            margin:10px 0;
             border-radius: 10px;
-            height: 48px;
-            line-height: 48px;
+            height: 37px;
+            line-height: 37px;
             text-align: center;
-            margin-right:10px;
+            margin-right: 10px;
         }
 
             ul#mainnav li a:hover {
-                background-color: #e4e4e4;
+                background-color: #666;
             }
 
             ul#mainnav li a.selected {
-                background-color:orange;
+                background-color: #045B9E;
             }
 /*main部分设置*/
 #main .mainbody {
@@ -123,7 +124,6 @@ ul#mainnav {
     padding: 10px 10px 25px 10px;
     /*固定header*/
     /*margin-top:80px;*/
-
 }
 
 /*
