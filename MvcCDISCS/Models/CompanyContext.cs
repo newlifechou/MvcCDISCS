@@ -17,19 +17,19 @@ namespace MvcCDISCS.Models
 
         }
         //set all the dbset
-        public DbSet<admin> admins { get; set; }
-        public DbSet<basicinfo> basicinfos { get; set; }
-        public DbSet<morebasicinfo> morebasicinfos { get; set; }
-        public DbSet<flash> flashs { get; set; }
-        public DbSet<product> products { get; set; }
-        public DbSet<productcategory> productcategorys { get; set; }
-        public DbSet<service> services { get; set; }
-        public DbSet<news> newss { get; set; }
-        public DbSet<feedback> feedbacks { get; set; }
+        public DbSet<admin> admin { get; set; }
+        public DbSet<basicinfo> basicinfo { get; set; }
+        public DbSet<morebasicinfo> morebasicinfo { get; set; }
+        public DbSet<flash> flash { get; set; }
+        public DbSet<product> product { get; set; }
+        public DbSet<productcategory> productcategory { get; set; }
+        public DbSet<service> service { get; set; }
+        public DbSet<news> news { get; set; }
+        public DbSet<feedback> feedback { get; set; }
         public DbSet<friendlink> friendlink { get; set; }
-        public DbSet<log> logs { get; set; }
-        public DbSet<career> careers { get; set; }
-        public DbSet<notice> notices { get; set; }
+        public DbSet<log> log{ get; set; }
+        public DbSet<career> career { get; set; }
+        public DbSet<notice> notice { get; set; }
 
     }
 }

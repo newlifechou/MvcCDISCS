@@ -138,9 +138,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201411270102512_InitialCreate.cs" />
-    <Compile Include="Migrations\201411270102512_InitialCreate.Designer.cs">
-      <DependentUpon>201411270102512_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201411270248076_InitialCreate.cs" />
+    <Compile Include="Migrations\201411270248076_InitialCreate.Designer.cs">
+      <DependentUpon>201411270248076_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\admin.cs">
@@ -285,8 +285,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201411270102512_InitialCreate.resx">
-      <DependentUpon>201411270102512_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201411270248076_InitialCreate.resx">
+      <DependentUpon>201411270248076_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\zh-cn.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

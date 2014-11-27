@@ -13,7 +13,7 @@ namespace MvcCDISCS.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201411270102512_InitialCreate"; }
+            get { return "201411270248076_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

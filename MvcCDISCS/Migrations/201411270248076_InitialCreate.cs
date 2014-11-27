@@ -131,17 +131,6 @@ namespace MvcCDISCS.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.productcategories",
-                c => new
-                    {
-                        CategoryId = c.Int(nullable: false, identity: true),
-                        CategoryName = c.String(nullable: false),
-                        Photo = c.String(nullable: false),
-                        Memo = c.String(nullable: false),
-                    })
-                .PrimaryKey(t => t.CategoryId);
-            
-            CreateTable(
                 "dbo.products",
                 c => new
                     {
@@ -156,6 +145,17 @@ namespace MvcCDISCS.Migrations
                 .PrimaryKey(t => t.ProductId)
                 .ForeignKey("dbo.productcategories", t => t.CategoryId, cascadeDelete: true)
                 .Index(t => t.CategoryId);
+            
+            CreateTable(
+                "dbo.productcategories",
+                c => new
+                    {
+                        CategoryId = c.Int(nullable: false, identity: true),
+                        CategoryName = c.String(nullable: false),
+                        Photo = c.String(nullable: false),
+                        Memo = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.CategoryId);
             
             CreateTable(
                 "dbo.services",
@@ -175,8 +175,8 @@ namespace MvcCDISCS.Migrations
             DropForeignKey("dbo.products", "CategoryId", "dbo.productcategories");
             DropIndex("dbo.products", new[] { "CategoryId" });
             DropTable("dbo.services");
-            DropTable("dbo.products");
             DropTable("dbo.productcategories");
+            DropTable("dbo.products");
             DropTable("dbo.notices");
             DropTable("dbo.news");
             DropTable("dbo.morebasicinfoes");

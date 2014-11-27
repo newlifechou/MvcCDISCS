@@ -15,7 +15,11 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.PageTitle = db.basicinfos.Single().CompanyName;
+            //admin a = new admin { UserName = "xs", Password = "newlifehcou", Role = "Adminsitrator" };
+            //db.admin.Add(a);
+            //db.SaveChanges();
+            //ViewBag.PageTitle = "newlifechou";
+            ViewBag.PageTitle = db.basicinfo.Single().CompanyName;
             return View();
         }
 
