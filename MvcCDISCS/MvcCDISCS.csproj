@@ -281,6 +281,7 @@
     <Content Include="Views\Home\GetContact.cshtml" />
     <Content Include="Views\Shared\_Content.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\GetFriendLink.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -50,15 +50,15 @@
                 </ul>
                 <p>
                     友情链接:
-                    @Html.DropDownList("FriendLinkList")
-                    <input type="button" value="Go" />
+                    @Html.Action("GetFriendLink","Home")
+                    <input type="button" value="Go" id="btnFriendlinkGo" />
                 </p>
             </div>
         </div>
         <div class="wraper" id="footerbottom">
             <ul>
-                @Html.Action("GetContact", "Home")
-                <li>版权所有&copy; 2014  成都成航安全系统有限责任公司</li>
+                @Html.Action("GetFriendLink", "Home")
+                <li>版权所有&copy; 2014  </li>
             </ul>
             <div class="bcode">
                 <p>手机扫描二维码添加联系方式</p>

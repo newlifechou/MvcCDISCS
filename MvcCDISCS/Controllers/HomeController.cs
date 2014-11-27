@@ -26,8 +26,6 @@ namespace MvcCDISCS.Controllers
             hi.ProductCategories = db.productcategory.Take(5).ToList();
             //get the introduction
             hi.Introduction = db.morebasicinfo.Where(o => o.Id == 1).Single().ItemContent;
-
-            ViewBag.FriendLinkList = new SelectList(db.friendlink, "SiteUrl", "SiteName");
             return View(hi);
         }
 
@@ -39,6 +37,16 @@ namespace MvcCDISCS.Controllers
         {
             basicinfo bi = db.basicinfo.Single();
             return PartialView(bi);
+        }
+
+        /// <summary>
+        /// GetFriendLink
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetFriendLink()
+        {
+            ViewBag.FriendLinkList = new SelectList(db.friendlink, "SiteUrl", "SiteName");
+            return PartialView();
         }
         /// <summary>
         /// 
