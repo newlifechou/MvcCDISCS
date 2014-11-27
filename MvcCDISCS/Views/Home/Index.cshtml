@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.PageTitle =ViewBag.PageTitle+ "-网站";
+    ViewBag.PageTitle = ViewBag.PageTitle + "-网站";
 }
 @section cssmore{
     <link href="~/Content/home.css" rel="stylesheet" type="text/css" />
@@ -7,7 +7,22 @@
 <!--slide-->
 @section slide{
     <div id="slide">
-        <img src="~/Images/slide.jpg" alt="slide" />
+        <ul class="slidephoto">
+            <li><img src="~/Images/slide/slider1.jpg" alt="slide" /></li>
+            <li><img src="~/Images/slide/slider2.jpg" alt="slide" /></li>
+            <li><img src="~/Images/slide/slider3.jpg" alt="slide" /></li>
+            <li><img src="~/Images/slide/slider4.jpg" alt="slide" /></li>
+            <li><img src="~/Images/slide/slider5.jpg" alt="slide" /></li>
+            <li><img src="~/Images/slide/slider6.jpg" alt="slide" /></li>
+        </ul>
+        <ul class="slideindicator">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 }
 @section scripts{
