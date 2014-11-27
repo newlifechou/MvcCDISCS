@@ -27,6 +27,8 @@
 
             #leftpart .partmenu ul li a:hover {
                 background: orange;
+                /*border-left: 6px solid #000;
+                border-right: 6px solid #000;*/
             }
 
 
@@ -110,8 +112,8 @@ div#productlist {
 }
 
 /*Product*/
-#productdetailscontent{
-    margin-top:5px;
-    padding-top:5px;
-    border-top:1px solid #999;
+#productdetailscontent {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #999;
 }
