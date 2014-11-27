@@ -283,6 +283,8 @@
     <Content Include="Views\Shared\_Content.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\PV\GetFriendLink.cshtml" />
+    <Content Include="Views\Home\ProductCategory.cshtml" />
+    <Content Include="Views\PV\GetProductCategoryMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

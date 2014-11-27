@@ -29,9 +29,8 @@ namespace MvcCDISCS.Controllers
             return View(hi);
         }
 
-       
         /// <summary>
-        /// 
+        /// About
         /// </summary>
         /// <returns></returns>
         public ActionResult About(int id = 0)
@@ -42,6 +41,20 @@ namespace MvcCDISCS.Controllers
             }
             morebasicinfo mbc = db.morebasicinfo.Where(o => o.Id == id).Single();
             return View(mbc);
+        }
+        /// <summary>
+        /// ProductCategory
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult ProductCategory(int id=0)
+        {
+            if (id==0)
+            {
+                return HttpNotFound();
+            }
+            productcategory pc = db.productcategory.Include("Products").Where(o=>o.CategoryId==id).Single();
+            return View(pc);
         }
     }
 }

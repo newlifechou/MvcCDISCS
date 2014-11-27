@@ -37,5 +37,11 @@ namespace MvcCDISCS.Controllers
             return PartialView();
         }
 
+        public ActionResult GetProductCategoryMenu()
+        {
+            List<productcategory> pc = db.productcategory.ToList();
+            return PartialView(pc);
+        }
+
     }
 }

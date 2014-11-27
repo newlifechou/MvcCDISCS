@@ -1,0 +1,6 @@
+﻿@model IEnumerable<MvcCDISCS.Models.productcategory>
+
+@foreach (var item in Model)
+{
+    <li><a href="~/Home/ProductCategory/@item.CategoryId">@item.CategoryName</a></li>
+}
