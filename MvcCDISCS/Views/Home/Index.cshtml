@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.PageTitle = ViewBag.PageTitle + "-网站";
+﻿@model MvcCDISCS.Models.HomeIndex
+@{
+    ViewBag.PageTitle = Model.PageTitle + "-网站";
 }
 @section cssmore{
     <link href="~/Content/home.css" rel="stylesheet" type="text/css" />
@@ -8,20 +9,19 @@
 @section slide{
     <div id="slide">
         <ul class="slidephoto">
-            <li><img src="~/Images/slide/slider1.jpg" alt="slide" /></li>
-            <li><img src="~/Images/slide/slider2.jpg" alt="slide" /></li>
-            <li><img src="~/Images/slide/slider3.jpg" alt="slide" /></li>
-            <li><img src="~/Images/slide/slider4.jpg" alt="slide" /></li>
-            <li><img src="~/Images/slide/slider5.jpg" alt="slide" /></li>
-            <li><img src="~/Images/slide/slider6.jpg" alt="slide" /></li>
+            @foreach (var item in Model.Slides)
+            {
+                <li>
+                    <img src="~/Images/slide/@(item.SlidePhoto).jpg" alt="@item.SlidePhoto" />
+                    <p>@item.Memo</p>
+                </li>
+            }
         </ul>
         <ul class="slideindicator">
-            <li class="selected"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            @foreach (var item in Model.Slides)
+            {
+                <li></li>
+            }
         </ul>
     </div>
 }

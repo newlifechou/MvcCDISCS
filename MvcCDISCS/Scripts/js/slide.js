@@ -28,7 +28,7 @@ $(function () {
             if (pageindex == pagelen) {
                 pageindex = 0;
             }
-        }, 3000);
+        }, 5000);
     }).trigger("mouseleave");
 
     function ShowImg(pageindex) {

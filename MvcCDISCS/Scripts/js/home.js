@@ -25,4 +25,12 @@
         h3 = h2;
     }
     $("div#about").height(h3);
+
+
+    //mo on slide photo demo
+    $("#slide ul.slidephoto li p").hover(function () {
+        $(this).addClass("mo");
+    }, function () {
+        $(this).removeClass("mo");
+    });
 });

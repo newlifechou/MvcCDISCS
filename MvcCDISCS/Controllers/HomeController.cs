@@ -15,12 +15,12 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index()
         {
-            //admin a = new admin { UserName = "xs", Password = "newlifehcou", Role = "Adminsitrator" };
-            //db.admin.Add(a);
-            //db.SaveChanges();
-            //ViewBag.PageTitle = "newlifechou";
-            ViewBag.PageTitle = db.basicinfo.Single().CompanyName;
-            return View();
+            HomeIndex hi = new HomeIndex();
+            //get the pagetitle
+            hi.PageTitle = db.basicinfo.Single().CompanyName;
+            //get the slide list
+            hi.Slides = db.flash.OrderBy(o => o.Priority).ToList();
+            return View(hi);
         }
 
     }

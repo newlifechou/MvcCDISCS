@@ -159,6 +159,7 @@
     <Compile Include="Models\morebasicinfo.cs" />
     <Compile Include="Models\product.cs" />
     <Compile Include="Models\service.cs" />
+    <Compile Include="Models\ViewModel\HomeIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\zh-cn.Designer.cs">
       <AutoGen>True</AutoGen>
