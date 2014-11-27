@@ -46,58 +46,21 @@
 <!--category and about area-->
 <div id="middlearea">
     <div id="leftarea">
-        <h3 class="borderme titleh3">产品类型<span>全部</span></h3>
+        <h3 class="borderme titleh3">产品类型<span><a href="#">全部</a></span></h3>
         <ul class="categorylist">
-            <li class="borderme">
-                <img src="~/Images/categoryimage.jpg" alt="category" />
-                <div>
-                    <h5>爆破片<span>More+</span> </h5>
-                    <p>
-                        焊接波纹管广泛用于航空、航天、化工、船舶、核工业作为各种仪器仪表、
-                        调节附件中重要的基础元件。它在外载荷(如均布力、轴向力、横向力和扭矩等)作
-                    </p>
-                </div>
-            </li>
-            <li class="borderme">
-                <img src="~/Images/categoryimage.jpg" alt="category" />
-                <div>
-                    <h5>爆破片<span>More+</span> </h5>
-                    <p>
-                        焊接波纹管广泛用于航空、航天、化工、船舶、核工业作为各种仪器仪表、
-                        调节附件中重要的基础元件。它在外载荷(如均布力、轴向力、横向力和扭矩等)作
-                    </p>
-                </div>
-            </li>
-            <li class="borderme">
-                <img src="~/Images/categoryimage.jpg" alt="category" />
-                <div>
-                    <h5>爆破片<span>More+</span> </h5>
-                    <p>
-                        焊接波纹管广泛用于航空、航天、化工、船舶、核工业作为各种仪器仪表、
-                        调节附件中重要的基础元件。它在外载荷(如均布力、轴向力、横向力和扭矩等)作
-                    </p>
-                </div>
-            </li>
-            <li class="borderme">
-                <img src="~/Images/categoryimage.jpg" alt="category" />
-                <div>
-                    <h5>爆破片<span>More+</span> </h5>
-                    <p>
-                        焊接波纹管广泛用于航空、航天、化工、船舶、核工业作为各种仪器仪表、
-                        调节附件中重要的基础元件。它在外载荷(如均布力、轴向力、横向力和扭矩等)作
-                    </p>
-                </div>
-            </li>
-            <li class="borderme">
-                <img src="~/Images/categoryimage.jpg" alt="category" />
-                <div>
-                    <h5>爆破片<span>More+</span> </h5>
-                    <p>
-                        焊接波纹管广泛用于航空、航天、化工、船舶、核工业作为各种仪器仪表、
-                        调节附件中重要的基础元件。它在外载荷(如均布力、轴向力、横向力和扭矩等)作
-                    </p>
-                </div>
-            </li>
+            @foreach (var item in Model.ProductCategories)
+            {
+                <li class="borderme">
+                    <img src="~/Images/@(item.Photo).jpg" alt="@item.CategoryName" />
+                    <div>
+                        <h5>@item.CategoryName<span>More+</span> </h5>
+                        <p>
+                            <!--substring 70-->
+                            @item.Memo.Substring(0, 70);
+                        </p>
+                    </div>
+                </li>
+            }
         </ul>
     </div>
     <div id="rightarea">

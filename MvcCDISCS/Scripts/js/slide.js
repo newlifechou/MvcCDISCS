@@ -28,12 +28,12 @@ $(function () {
             if (pageindex == pagelen) {
                 pageindex = 0;
             }
-        }, 5000);
+        }, 6000);
     }).trigger("mouseleave");
 
     function ShowImg(pageindex) {
         //move to left a width
-        $("#slide ul.slidephoto").stop().animate({ left: -width * pageindex }, 1000);
+        $("#slide ul.slidephoto").stop().animate({ left: -width * pageindex }, "slow");
         //indicator the pageindex
         $("#slide ul.slideindicator li").removeClass("selected").eq(pageindex).addClass("selected");
     }

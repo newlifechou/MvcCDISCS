@@ -22,6 +22,9 @@ namespace MvcCDISCS.Controllers
             hi.Slides = db.flash.OrderBy(o => o.Priority).ToList();
             //get notice slide list
             hi.Notices = db.notice.Where(o => o.IsShow == true).OrderBy(o => o.Priority).ToList();
+            //get productcategories,5 in count
+            hi.ProductCategories = db.productcategory.Take(5).ToList();
+
             return View(hi);
         }
 
