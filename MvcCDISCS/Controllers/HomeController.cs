@@ -56,5 +56,14 @@ namespace MvcCDISCS.Controllers
             productcategory pc = db.productcategory.Include("Products").Where(o=>o.CategoryId==id).Single();
             return View(pc);
         }
+        /// <summary>
+        /// Contact
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Contact()
+        {
+            return View();
+        }
+          
     }
 }

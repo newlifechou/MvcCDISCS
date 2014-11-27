@@ -23,7 +23,7 @@
                 <li><a href="~/Home/About/1">关于我们</a></li>
                 <li><a href="~/Home/ProductCategory/2">产品中心</a></li>
                 <li><a href="#">技术服务</a></li>
-                <li><a href="#">联系方式</a></li>
+                <li><a href="~/Home/Contact">联系方式</a></li>
             </ul>
         </div>
     </div>
@@ -46,19 +46,17 @@
                     <li><a href="~/Home/About/1">关于我们</a></li>
                     <li><a href="~/Home/ProductCategory/2">产品中心</a></li>
                     <li><a href="#">技术服务</a></li>
-                    <li><a href="#">联系方式</a></li>
+                    <li><a href="~/Home/Contact">联系方式</a></li>
                 </ul>
                 <p>
                     友情链接:
-                    @Html.Action("GetFriendLink","PV")
+                    @Html.Action("GetFriendLink", "PV")
                     <input type="button" value="Go" id="btnFriendlinkGo" />
                 </p>
             </div>
         </div>
         <div class="wraper" id="footerbottom">
-            <ul>
-                @Html.Action("GetContact", "PV", new { show="yes"})
-            </ul>
+            @Html.Action("GetContact", "PV", new { show = "yes" })
             <div class="bcode">
                 <p>手机扫描二维码添加联系方式</p>
                 <img src="~/Images/BCode.jpg" alt="bcode" />
