@@ -47,14 +47,24 @@ namespace MvcCDISCS.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult ProductCategory(int id=0)
+        public ActionResult ProductCategory(int id = 0)
         {
-            if (id==0)
+            if (id == 0)
             {
                 return HttpNotFound();
             }
-            productcategory pc = db.productcategory.Include("Products").Where(o=>o.CategoryId==id).Single();
+            productcategory pc = db.productcategory.Include("Products").Where(o => o.CategoryId == id).Single();
             return View(pc);
+        }
+        /// <summary>
+        /// Product
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult Product(int id=0)
+        {
+            product p = db.product.Where(o => o.ProductId==id).Single();
+            return View(p);
         }
         /// <summary>
         /// Contact
@@ -64,6 +74,6 @@ namespace MvcCDISCS.Controllers
         {
             return View();
         }
-          
+
     }
 }

@@ -287,6 +287,7 @@
     <Content Include="Views\Home\ProductCategory.cshtml" />
     <Content Include="Views\PV\GetProductCategoryMenu.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

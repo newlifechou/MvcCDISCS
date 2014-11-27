@@ -108,3 +108,10 @@ div#productlist {
 #contactcontent {
     list-style: none;
 }
+
+/*Product*/
+#productdetailscontent{
+    margin-top:5px;
+    padding-top:5px;
+    border-top:1px solid #999;
+}

@@ -31,7 +31,7 @@
         {
             foreach (var item in Model.Products)
             {
-                <a href="#">
+                <a href="~/Home/Product/@item.ProductId">
                     <img src="~/Images/product/@(item.Photo).jpg" alt="@item.Photo" />
                     <p>@item.ProductName</p>
                 </a>
