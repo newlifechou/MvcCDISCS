@@ -6,9 +6,9 @@
 
     #leftpart .partmenu {
         border: 2px solid #e4e4e4;
+        background-color: #efefef;
         border-radius: 5px;
-        background: white;
-        margin-bottom:20px;
+        margin-bottom: 20px;
     }
 
         #leftpart .partmenu h3 {
@@ -39,6 +39,7 @@
     /*background-color: lightblue;*/
     padding: 10px;
     min-height: 450px;
+    /*background: white;*/
     background-color: #efefef;
 }
 
@@ -104,6 +105,6 @@ div#productlist {
 
 
 /*Contact*/
-#contactcontent{
-    list-style:none;
+#contactcontent {
+    list-style: none;
 }
