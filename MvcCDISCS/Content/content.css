@@ -66,7 +66,7 @@ div#topcontent {
     }
 
 div#productlist {
-    margin-top:5px;
+    margin-top: 5px;
     border: 1px solid #999;
     border-radius: 5px;
     padding: 6px;
@@ -91,8 +91,8 @@ div#productlist {
             height: 130px;
         }
 
-div.productlist a p {
-    text-align: center;
-    padding: 5px 0;
-    background-color: #999;
-}
+        div#productlist a p {
+            text-align: center;
+            padding: 5px 0;
+            background-color: #999;
+        }

@@ -46,14 +46,14 @@
 <!--category and about area-->
 <div id="middlearea">
     <div id="leftarea">
-        <h3 class="borderme titleh3">产品类型<span><a href="#">全部</a></span></h3>
+        <h3 class="borderme titleh3">产品类型<span><a href="~/Home/ProductCategory/2">更多</a></span></h3>
         <ul class="categorylist">
             @foreach (var item in Model.ProductCategories)
             {
                 <li class="borderme">
                     <img src="~/Images/@(item.Photo).jpg" alt="@item.CategoryName" />
                     <div>
-                        <h5>@item.CategoryName<span>More+</span> </h5>
+                        <h5>@item.CategoryName<span><a href="~/Home/ProductCategory/@item.CategoryId">More</a></span> </h5>
                         <p>
                             <!--substring 70-->
                             @item.Memo.Substring(0, 70);
@@ -64,7 +64,7 @@
         </ul>
     </div>
     <div id="rightarea">
-        <h3 class="borderme titleh3">公司简介<span><a href="#">更多</a></span></h3>
+        <h3 class="borderme titleh3">公司简介<span><a href="~/Home/About/1">更多</a></span></h3>
         <div id="about" class="borderme">
             <div>
                 <img src="~/Images/aboutphoto.jpg" alt="about" />
@@ -76,7 +76,7 @@
     </div>
 </div>
 <div id="bottomarea">
-    <h3 class="borderme titleh3">产品列表<span>全部</span></h3>
+    <h3 class="borderme titleh3">产品列表<span><a href="~/Home/ProductCategory/2">更多</a></span></h3>
     <div id="productslide" class="borderme">
         <img id="leftarrow" class="arrow" src="~/Images/left-arrow.png" alt="left-arrow" />
         <ul>

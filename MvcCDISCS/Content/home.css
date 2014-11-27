@@ -173,8 +173,10 @@ ul.categorylist li {
 
             ul.categorylist li div h5 span {
                 float: right;
-                font-size: 0.7em;
-                color: orange;
+                font-size: 0.8em; 
+            }
+            ul.categorylist li div h5 span a{
+                color:blue;
             }
 
         ul.categorylist li div p {
