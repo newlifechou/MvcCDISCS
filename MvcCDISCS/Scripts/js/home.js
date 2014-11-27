@@ -44,7 +44,7 @@
     var noticeheight = $noticeli.height();
 
     $("#notice div.noticecontent").hover(function () {
-        clearInterval("noticeTimer");
+        clearInterval(noticeTimer);
     }, function () {
         noticeTimer = setInterval(function () {
             ShowNotice(noticeindex);
@@ -53,7 +53,7 @@
             if (noticeindex == noticepage) {
                 noticeindex = 0;
             }
-        }, 5000);
+        }, 6000);
     }).trigger("mouseleave");
 
     function ShowNotice(noticeindex) {

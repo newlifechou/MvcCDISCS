@@ -9,5 +9,6 @@ namespace MvcCDISCS.Models
     {
         public string PageTitle { get; set; }
         public List<flash> Slides { get; set; }
+        public List<notice> Notices { get; set; }
     }
 }

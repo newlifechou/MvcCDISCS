@@ -76,6 +76,7 @@
     background-color: #FEFECC;
     padding: 12px;
     margin-top: 10px;
+    font-size:0.8em;
     overflow: hidden;
 }
 
@@ -84,6 +85,7 @@
         float: left;
         height: 20px;
         line-height: 20px;
+        font-weight:bold;
     }
 
     #notice div.noticecontent {
@@ -92,7 +94,8 @@
         height: 20px;
         overflow: hidden;
         width: 1000px;
-        background-color: white;
+        color:orange;
+        /*background-color: white;*/
     }
 
         #notice div.noticecontent ul {
@@ -103,6 +106,9 @@
             #notice div.noticecontent ul li {
                 height: 20px;
                 line-height: 20px;
+            }
+            #notice div.noticecontent ul li a{
+                color:blue;
             }
 
 /*general border for the box*/

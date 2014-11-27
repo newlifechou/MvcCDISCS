@@ -20,6 +20,8 @@ namespace MvcCDISCS.Controllers
             hi.PageTitle = db.basicinfo.Single().CompanyName;
             //get the slide list
             hi.Slides = db.flash.OrderBy(o => o.Priority).ToList();
+            //get notice slide list
+            hi.Notices = db.notice.Where(o => o.IsShow == true).OrderBy(o => o.Priority).ToList();
             return View(hi);
         }
 

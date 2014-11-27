@@ -36,11 +36,10 @@
     </p>
     <div class="noticecontent">
         <ul>
-            <li>01</li>
-            <li>02</li>
-            <li>03</li>
-            <li>04</li>
-            <li>05</li>
+                @foreach (var item in Model.Notices)
+                {
+                    <li>@Html.Raw(item.NoticeContent)</li>
+                }
         </ul>
     </div>
 </div>
