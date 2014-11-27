@@ -14,7 +14,6 @@
         }
     );
 
-
     //same height of the leftarea and rightarea in the middle part
     var h1 = $("div#leftarea ul.categorylist").height();
     var h2 = $("div#about").height();
@@ -25,6 +24,5 @@
     else {
         h3 = h2;
     }
-
     $("div#about").height(h3);
 });
