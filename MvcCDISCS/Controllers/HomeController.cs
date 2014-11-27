@@ -15,6 +15,7 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.PageTitle = db.basicinfos.Single().CompanyName;
             return View();
         }
 
