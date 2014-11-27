@@ -26,6 +26,7 @@ namespace MvcCDISCS.Models
         [StringLength(50, ErrorMessage = "长度不能大于80")]
         public string Email { get; set; }
         public string Address { get; set; }
+        [StringLength(20, ErrorMessage = "长度不能大于20")]
         public string PostCode { get; set; }
     }
 }

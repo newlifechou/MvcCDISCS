@@ -21,8 +21,9 @@ namespace MvcCDISCS.Models
         [Required(ErrorMessage = "不能为空")]
         public string Photo { get; set; }
         [Required(ErrorMessage = "不能为空")]
-        public int CategoryId { get; set; }
         public string Content { get; set; }
+
+        public int CategoryId { get; set; }
         public virtual productcategory Category { get; set; }
     }
 }
