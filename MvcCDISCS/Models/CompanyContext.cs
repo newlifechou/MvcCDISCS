@@ -12,7 +12,7 @@ namespace MvcCDISCS.Models
     public class CompanyContext : DbContext
     {
         public CompanyContext()
-            : base("name=DefaultConnection")
+            : base("name=cdiscs")
         {
 
         }
