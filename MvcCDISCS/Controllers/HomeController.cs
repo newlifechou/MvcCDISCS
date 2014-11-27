@@ -30,13 +30,27 @@ namespace MvcCDISCS.Controllers
         }
 
         /// <summary>
-        /// 
+        /// GetContact PartialView
         /// </summary>
         /// <returns></returns>
         public ActionResult GetContact()
         {
             basicinfo bi = db.basicinfo.Single();
             return PartialView(bi);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult About(int id = 0)
+        {
+            if (id < 1 || id > 10)
+            {
+                return HttpNotFound();
+            }
+            morebasicinfo mbc = db.morebasicinfo.Where(o => o.Id == id).Single();
+            return View(mbc);
         }
     }
 }

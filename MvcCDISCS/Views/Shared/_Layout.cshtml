@@ -19,8 +19,8 @@
         <div class="wraper">
             <img id="logo" src="~/Images/logo.gif" alt="CDISCS" />
             <ul id="mainnav">
-                <li><a href="#" class="selected">首页</a></li>
-                <li><a href="#">关于我们</a></li>
+                <li><a href="~/Home/Index">首页</a></li>
+                <li><a href="~/Home/About/1">关于我们</a></li>
                 <li><a href="#">产品中心</a></li>
                 <li><a href="#">技术服务</a></li>
                 <li><a href="#">联系方式</a></li>
@@ -42,8 +42,8 @@
         <div id="footerlink">
             <div class="wraper">
                 <ul>
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">关于我们</a></li>
+                    <li><a href="~/Home/Index">首页</a></li>
+                    <li><a href="~/Home/About/1">关于我们</a></li>
                     <li><a href="#">产品中心</a></li>
                     <li><a href="#">技术服务</a></li>
                     <li><a href="#">联系方式</a></li>
@@ -74,6 +74,7 @@
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
     <!--own script-->
-    <script src="~/Scripts/js/layout.js"></script>
+    <!--something wrong with it, check it later-->
+    @*<script src="~/Scripts/js/layout.js"></script>*@
 </body>
 </html>

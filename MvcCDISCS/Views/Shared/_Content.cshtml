@@ -1,0 +1,18 @@
+﻿@{
+    //ViewBag.PageTitle = "Content";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section cssmore{
+    <link href="~/Content/content.css" rel="stylesheet" type="text/css" />
+}
+<!--leftpart menu-->
+<div id="leftpart">
+    @RenderSection("leftpart")
+</div>
+
+<!--right part content-->
+<div id="rightpart">
+    @RenderSection("rightpart")
+</div>
+
+

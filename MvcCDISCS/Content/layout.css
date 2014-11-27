@@ -124,6 +124,8 @@ ul#mainnav {
     padding: 10px 10px 25px 10px;
     /*固定header*/
     /*margin-top:80px;*/
+    overflow:hidden;
+    min-height:500px;
 }
 
 /*
