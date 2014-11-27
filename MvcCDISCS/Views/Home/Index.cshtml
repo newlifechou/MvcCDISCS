@@ -5,6 +5,10 @@
 @section cssmore{
     <link href="~/Content/home.css" rel="stylesheet" type="text/css" />
 }
+@section scripts{
+    <script src="~/Scripts/js/home.js"></script>
+    <script src="~/Scripts/js/slide.js"></script>
+}
 <!--slide-->
 @section slide{
     <div id="slide">
@@ -25,13 +29,20 @@
         </ul>
     </div>
 }
-@section scripts{
-    <script src="~/Scripts/js/home.js"></script>
-    <script src="~/Scripts/js/slide.js"></script>
-}
 <!--notice-->
 <div id="notice">
-    <p><span>公告：</span>2014-11-23  本公司新版网站正式开始运行，欢迎各位访问浏览~</p>
+    <p class="noticeleft">
+        公告：
+    </p>
+    <div class="noticecontent">
+        <ul>
+            <li>01</li>
+            <li>02</li>
+            <li>03</li>
+            <li>04</li>
+            <li>05</li>
+        </ul>
+    </div>
 </div>
 <!--category and about area-->
 <div id="middlearea">

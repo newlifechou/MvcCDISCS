@@ -33,4 +33,30 @@
     }, function () {
         $(this).removeClass("mo");
     });
+
+
+    //notice show
+    var noticeTimer;
+    var noticeindex = 0;
+    var $noticeli = $("#notice div.noticecontent ul li");
+    var $noticeul = $("#notice div.noticecontent ul");
+    var noticepage =$noticeli.length;
+    var noticeheight = $noticeli.height();
+
+    $("#notice div.noticecontent").hover(function () {
+        clearInterval("noticeTimer");
+    }, function () {
+        noticeTimer = setInterval(function () {
+            ShowNotice(noticeindex);
+            noticeindex++;
+
+            if (noticeindex == noticepage) {
+                noticeindex = 0;
+            }
+        }, 5000);
+    }).trigger("mouseleave");
+
+    function ShowNotice(noticeindex) {
+        $noticeul.stop().animate({ top: -noticeheight * noticeindex }, 1000);
+    }
 });

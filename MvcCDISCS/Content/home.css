@@ -71,20 +71,39 @@
                 background-color: orange;
                 cursor: default;
             }
-
+/*notice*/
 #notice {
     background-color: #FEFECC;
     padding: 12px;
     margin-top: 10px;
+    overflow: hidden;
 }
 
-    #notice p {
-        font-size: 0.9em;
+    #notice p.noticeleft {
+        margin-right: 10px;
+        float: left;
+        height: 20px;
+        line-height: 20px;
     }
 
-        #notice p span {
-            margin-right: 10px;
+    #notice div.noticecontent {
+        position: relative;
+        float: left;
+        height: 20px;
+        overflow: hidden;
+        width: 1000px;
+        background-color: white;
+    }
+
+        #notice div.noticecontent ul {
+            position: absolute;
+            top: 0;
         }
+
+            #notice div.noticecontent ul li {
+                height: 20px;
+                line-height: 20px;
+            }
 
 /*general border for the box*/
 .borderme {
