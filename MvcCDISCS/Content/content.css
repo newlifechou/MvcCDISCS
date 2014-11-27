@@ -37,6 +37,7 @@
     /*background-color: lightblue;*/
     padding: 10px;
     min-height: 450px;
+    background-color: #efefef;
 }
 
     #rightpart h2 {
@@ -45,13 +46,53 @@
         color: blue;
     }
 
-    #rightpart img#titleimg {
-        width: 250px;
-        height: 150px;
+div#topcontent {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px 5px;
+    overflow: hidden;
+}
+
+    div#topcontent img#titleimg {
+        width: 300px;
+        height: 200px;
+        padding: 5px;
+        background-color: white;
+        float: left;
     }
 
-    #rightpart div.productlist {
-        margin-top: 20px;
-        border-top: 1px solid #999;
-        padding-top: 10px;
+    div#topcontent p {
+        margin-left: 320px;
     }
+
+div#productlist {
+    margin-top:5px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 6px;
+    overflow: hidden;
+}
+
+    div#productlist a {
+        display: block;
+        float: left;
+        margin: 0 13px 10px 0;
+        padding: 5px;
+        background-color: white;
+    }
+
+        div#productlist a:hover {
+            background-color: lightblue;
+        }
+
+        div#productlist a img {
+            display: block;
+            width: 180px;
+            height: 130px;
+        }
+
+div.productlist a p {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #999;
+}

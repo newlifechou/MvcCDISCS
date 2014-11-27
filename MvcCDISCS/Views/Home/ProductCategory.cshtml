@@ -14,19 +14,20 @@
 }
 @section rightpart{
     <h2>@Model.CategoryName</h2>
-    <img src="~/Images/@(Model.Photo).jpg" alt="@Model.CategoryName" id="titleimg" />
-    <div class="productlist">
+    <div id="topcontent">
+        <img src="~/Images/@(Model.Photo).jpg" alt="@Model.CategoryName" id="titleimg" />
+        <p>@Model.Memo</p>
+    </div>
+    <div id="productlist">
         <!--display the products under the category list-->
         @if (Model.Products.Count > 0)
         {
             foreach (var item in Model.Products)
             {
-                <div class="plist">
-                    <a href="#">
-                        <img src="~/Images/slide/@(item.Photo).jpg" alt="@item.Photo" />
-                        <p>@item.ProductName</p>
-                    </a>
-                </div>
+                <a href="#">
+                    <img src="~/Images/product/@(item.Photo).jpg" alt="@item.Photo" />
+                    <p>@item.ProductName</p>
+                </a>
             }
         }
         else

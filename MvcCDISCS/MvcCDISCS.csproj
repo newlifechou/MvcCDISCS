@@ -237,6 +237,7 @@
     <Content Include="Images\left-arrow.png" />
     <Content Include="Images\logo.gif" />
     <Content Include="Images\productphoto.jpg" />
+    <Content Include="Images\product\product.jpg" />
     <Content Include="Images\right-arrow.png" />
     <Content Include="Images\slide.jpg" />
     <Content Include="Images\slide\slider1.jpg" />
