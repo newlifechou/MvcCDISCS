@@ -191,11 +191,10 @@ ul#mainnav {
             /*font-weight: bold;*/
             font-size: 0.9em;
             color: #333;
-            padding: 8px 0;
+            padding: 4px 0;
         }
 
     #footerbottom div.bcode {
-        margin-top: 30px;
         float: right;
     }
 

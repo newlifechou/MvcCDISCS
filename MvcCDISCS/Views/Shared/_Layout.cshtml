@@ -50,15 +50,14 @@
                 </ul>
                 <p>
                     友情链接:
-                    @Html.Action("GetFriendLink","Home")
+                    @Html.Action("GetFriendLink","PV")
                     <input type="button" value="Go" id="btnFriendlinkGo" />
                 </p>
             </div>
         </div>
         <div class="wraper" id="footerbottom">
             <ul>
-                @Html.Action("GetFriendLink", "Home")
-                <li>版权所有&copy; 2014  </li>
+                @Html.Action("GetContact", "PV", new { show="yes"})
             </ul>
             <div class="bcode">
                 <p>手机扫描二维码添加联系方式</p>

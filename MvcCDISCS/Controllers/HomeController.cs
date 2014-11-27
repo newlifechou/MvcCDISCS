@@ -29,25 +29,7 @@ namespace MvcCDISCS.Controllers
             return View(hi);
         }
 
-        /// <summary>
-        /// GetContact PartialView
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult GetContact()
-        {
-            basicinfo bi = db.basicinfo.Single();
-            return PartialView(bi);
-        }
-
-        /// <summary>
-        /// GetFriendLink
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult GetFriendLink()
-        {
-            ViewBag.FriendLinkList = new SelectList(db.friendlink, "SiteUrl", "SiteName");
-            return PartialView();
-        }
+       
         /// <summary>
         /// 
         /// </summary>

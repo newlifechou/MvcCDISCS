@@ -1,7 +1,7 @@
 ﻿@model MvcCDISCS.Models.basicinfo
 
 <li>
-    @Html.DisplayFor(o=>o.CompanyName)
+    @Html.DisplayFor(o => o.CompanyName)
 </li>
 <li>
     @Html.DisplayNameFor(o => o.Contact):
@@ -27,3 +27,7 @@
     @Html.DisplayNameFor(o => o.Address):
     @Html.DisplayFor(o => o.Address)
 </li>
+@if ((string)(ViewBag.Show)== "yes")
+{
+    <li>版权所有&copy; 2014 @Html.DisplayFor(o => o.CompanyName)</li>
+}
