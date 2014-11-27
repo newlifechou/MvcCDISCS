@@ -11,6 +11,7 @@ namespace MvcCDISCS.Models
     /// </summary>
     public class product
     {
+        [Key]
         public int ProductId { get; set; }
         [Required(ErrorMessage = "不能为空")]
         public string ProductName { get; set; }

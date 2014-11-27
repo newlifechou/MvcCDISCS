@@ -15,7 +15,6 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index()
         {
-            
             return View();
         }
 
