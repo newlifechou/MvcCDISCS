@@ -101,7 +101,7 @@ ul#mainnav {
             color: white;
             display: block;
             padding: 5px 15px;
-            margin:10px 0;
+            margin: 10px 0;
             border-radius: 10px;
             height: 37px;
             line-height: 37px;
@@ -193,6 +193,7 @@ ul#mainnav {
         }
 
     #footerbottom div.bcode {
+        margin-top: 30px;
         float: right;
     }
 
@@ -205,4 +206,5 @@ ul#mainnav {
         #footerbottom div.bcode img {
             height: 175px;
             width: 175px;
+            margin-top:10px;
         }

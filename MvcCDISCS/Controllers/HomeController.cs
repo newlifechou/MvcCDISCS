@@ -29,5 +29,14 @@ namespace MvcCDISCS.Controllers
             return View(hi);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetContact()
+        {
+            basicinfo bi = db.basicinfo.Single();
+            return PartialView(bi);
+        }
     }
 }
