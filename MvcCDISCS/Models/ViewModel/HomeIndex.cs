@@ -11,5 +11,6 @@ namespace MvcCDISCS.Models
         public List<flash> Slides { get; set; }
         public List<notice> Notices { get; set; }
         public List<productcategory> ProductCategories { get; set; }
+        public string Introduction { get; set; }
     }
 }

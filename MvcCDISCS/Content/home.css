@@ -189,16 +189,16 @@ ul.categorylist li {
 #about {
 }
 
-    #about div {
+    #about>div {
         padding: 10px;
     }
 
-        #about div img {
+        #about>div img {
             margin: 0 auto;
             margin-bottom: 20px;
         }
 
-        #about div p {
+        #about>div>div {
             text-indent: 2em;
             font-size: 0.9em;
             line-height: 1.5;

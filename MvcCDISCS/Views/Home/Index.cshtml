@@ -36,10 +36,10 @@
     </p>
     <div class="noticecontent">
         <ul>
-                @foreach (var item in Model.Notices)
-                {
-                    <li>@Html.Raw(item.NoticeContent)</li>
-                }
+            @foreach (var item in Model.Notices)
+            {
+                <li>@Html.Raw(item.NoticeContent)</li>
+            }
         </ul>
     </div>
 </div>
@@ -64,23 +64,13 @@
         </ul>
     </div>
     <div id="rightarea">
-        <h3 class="borderme titleh3">公司简介<span>更多</span></h3>
+        <h3 class="borderme titleh3">公司简介<span><a href="#">更多</a></span></h3>
         <div id="about" class="borderme">
             <div>
                 <img src="~/Images/aboutphoto.jpg" alt="about" />
-                <p>
-                    成都成航工业安全系统有限责任公司是中航工业成都凯天电子股份有限公司(原成都航空仪表有
-                    限责任公司)的全资民品子公司，集产、供、销为一体的独立法人单位。   公司主要经营项目有：
-                    爆破片及爆破片装置，标准件、密封垫，安全装置、压力表，疏水阀、波纹管球芯截止阀、仪表
-                    阀、凝结水回收系统、节能环保设备、弹性敏感元件，机械密封件、金属“O”型密封圈的设计、
-                    研发、制造、销售，承接各类焊接，辗压、热处理业务。产品广泛应用于石化、锅炉、冶金、医
-                    药、空调、航空、航天等行业，并远销国内和国际市场，深受用户好评。公司遵循lSO9001：200
-                    0标准要求，经中国新时代质量体系认证中心认证合格，是中国石油化工股份有限公司和中国石油
-                    天然气股份有限公司资源市场网络成员单位。   面对新的挑战与机遇，我们将严格执行“采用先进
-                    技术和标准，不断改进创新；提供用户满意产品和服务，坚持守法诚信”的公司质量方针，时刻
-                    以用户为关注焦点，积极投身于激烈的市场竞争浪潮中，真诚希望与各界朋友紧密合作，实现双
-                    赢，共创美好未来。
-                </p>
+                <div>
+                    @Html.Raw(Model.Introduction)
+                </div>
             </div>
         </div>
     </div>
