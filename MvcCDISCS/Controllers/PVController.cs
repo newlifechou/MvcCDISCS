@@ -39,7 +39,7 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult GetProductCategoryMenu()
         {
-            List<productcategory> pc = db.productcategory.ToList();
+            List<productcategory> pc = db.productcategory.OrderBy(o=>o.Priority).ToList();
             return PartialView(pc);
         }
 

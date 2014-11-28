@@ -23,7 +23,7 @@ namespace MvcCDISCS.Controllers
             //get notice slide list
             hi.Notices = db.notice.Where(o => o.IsShow == true).OrderBy(o => o.Priority).ToList();
             //get productcategories,5 in count
-            hi.ProductCategories = db.productcategory.Take(5).ToList();
+            hi.ProductCategories = db.productcategory.OrderBy(o=>o.Priority).Take(5).ToList();
             //get the introduction
             hi.Introduction = db.morebasicinfo.Where(o => o.Id == 1).Single().ItemContent;
             return View(hi);
