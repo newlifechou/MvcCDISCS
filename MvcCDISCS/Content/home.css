@@ -73,11 +73,12 @@
             }
 /*notice*/
 #notice {
-    background-color: #FEFECC;
     padding: 12px;
     margin-top: 10px;
-    font-size:0.8em;
+    font-size: 0.8em;
     overflow: hidden;
+    background-color: #FEFECC;
+    border: 1px solid #FED22F;
 }
 
     #notice p.noticeleft {
@@ -85,7 +86,7 @@
         float: left;
         height: 20px;
         line-height: 20px;
-        font-weight:bold;
+        font-weight: bold;
     }
 
     #notice div.noticecontent {
@@ -94,7 +95,7 @@
         height: 20px;
         overflow: hidden;
         width: 1000px;
-        color:orange;
+        color: orange;
         /*background-color: white;*/
     }
 
@@ -107,9 +108,10 @@
                 height: 20px;
                 line-height: 20px;
             }
-            #notice div.noticecontent ul li a{
-                color:blue;
-            }
+
+                #notice div.noticecontent ul li a {
+                    color: blue;
+                }
 
 h3.titleh3 {
     background-color: #0767B2;
@@ -117,7 +119,7 @@ h3.titleh3 {
     font-size: 1.0em;
     padding: 8px 12px;
     margin-bottom: 5px;
-    border-width:2px;
+    border-width: 2px;
     border-radius: 5px;
 }
 
@@ -167,11 +169,12 @@ ul.categorylist li {
 
             ul.categorylist li div h5 span {
                 float: right;
-                font-size: 0.8em; 
+                font-size: 0.8em;
             }
-            ul.categorylist li div h5 span a{
-                color:blue;
-            }
+
+                ul.categorylist li div h5 span a {
+                    color: blue;
+                }
 
         ul.categorylist li div p {
             font-size: 0.7em;
@@ -185,16 +188,16 @@ ul.categorylist li {
 #about {
 }
 
-    #about>div {
+    #about > div {
         padding: 10px;
     }
 
-        #about>div img {
+        #about > div img {
             margin: 0 auto;
             margin-bottom: 20px;
         }
 
-        #about>div>div {
+        #about > div > div {
             text-indent: 2em;
             font-size: 0.9em;
             line-height: 1.5;
