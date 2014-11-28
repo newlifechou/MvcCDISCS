@@ -128,6 +128,7 @@ div#productlist {
     border: 1px solid #999;
     padding: 10px;
     margin-top: 10px;
+    overflow:hidden;
 }
 
     #servicecontent .serviceitem h5 {
@@ -140,8 +141,10 @@ div#productlist {
         margin: 10px 0;
         padding: 5px;
         background: white;
+        float:left;
     }
 
     #servicecontent .serviceitem p.servicep {
         padding: 10px 0;
+        margin-left:220px;
     }
