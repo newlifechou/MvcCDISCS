@@ -13,11 +13,9 @@ namespace MvcCDISCS.Models
     {
         public int Id { get; set; }
         [Required(ErrorMessage="不能为空")]
-        [StringLength(50,ErrorMessage="长度不能大于50")]
         public string UserName { get; set; }
         [Required(ErrorMessage = "不能为空")]
         public string Password { get; set; }
-        [Required]
         public string Role { get; set; }
     }
 }

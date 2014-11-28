@@ -154,6 +154,10 @@
     <Compile Include="Migrations\201411280317357_productcategoryaddc.Designer.cs">
       <DependentUpon>201411280317357_productcategoryaddc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411280847472_changeadmin.cs" />
+    <Compile Include="Migrations\201411280847472_changeadmin.Designer.cs">
+      <DependentUpon>201411280847472_changeadmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DBModels\admin.cs">
       <SubType>Code</SubType>
@@ -194,6 +198,7 @@
     <Content Include="Content\form.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\layout.css" />
+    <Content Include="Content\login.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\readme.txt" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -594,6 +599,8 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.eot" />
     <Content Include="ueditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -611,6 +618,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201411280317357_productcategoryaddc.resx">
       <DependentUpon>201411280317357_productcategoryaddc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411280847472_changeadmin.resx">
+      <DependentUpon>201411280847472_changeadmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\zh-cn.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

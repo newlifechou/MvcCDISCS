@@ -1,0 +1,25 @@
+﻿#loginarea {
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 350px;
+    margin: 150px auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+    #loginarea input {
+        border: 1px solid #999;
+        width: 300px;
+        border-radius: 5px;
+    }
+
+        #loginarea input[type=text], #loginarea input[type=password] {
+            margin-bottom: 10px;
+            width: 278px;
+            padding: 10px;
+        }
+
+        #loginarea input[type=submit] {
+            margin: 0 auto;
+            width: 300px;
+            padding: 15px 8px;
+        }
