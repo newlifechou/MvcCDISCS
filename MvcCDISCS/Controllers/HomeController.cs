@@ -93,13 +93,24 @@ namespace MvcCDISCS.Controllers
         }
 
         /// <summary>
-        /// 
+        /// FeedbackSuccess
         /// </summary>
         /// <returns></returns>
         public ActionResult FeedbackSuccess()
         {
             return View();
         }
+        /// <summary>
+        /// Service
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Service()
+        {
+            List<service> ss = db.service.ToList();
+            return View(ss);
+        }
+
+
 
         /// <summary>
         /// Contact

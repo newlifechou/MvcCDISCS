@@ -1,0 +1,37 @@
+﻿@model  IEnumerable<MvcCDISCS.Models.service>
+@{
+    ViewBag.PageTitle = "Service";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+
+@section leftpart{
+    <div class="partmenu">
+        <h3>联系我们</h3>
+        <ul>
+            <li><a href="~/Home/Contact">联系方式</a></li>
+        </ul>
+    </div>
+}
+
+@section rightpart{
+    <h2>@ViewBag.PageTitle</h2>
+    <div id="servicecontent">
+        @if (Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                <div class="serviceitem">
+                    <h5>@item.Title</h5>
+                    <img src="~/Images/@(item.Photo).jpg" alt="service" class="servicephoto"/>
+                    <p class="servicep">
+                        @item.Content
+                    </p>
+                </div>
+            }
+        }
+        else
+        {
+            <p>暂时没有服务项目，敬请稍后</p>
+        }
+    </div>
+}
