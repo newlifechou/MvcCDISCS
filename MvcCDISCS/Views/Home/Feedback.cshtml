@@ -27,11 +27,11 @@
     <div>
         @using (Html.BeginForm())
         {
-            @Html.DisplayFor(o => Model.Title) @Html.EditorFor(o => Model.Title) @Html.ValidationMessageFor(o => Model.Title)<br />
-            @Html.DisplayFor(o => Model.CustomerName) @Html.EditorFor(o => Model.CustomerName) @Html.ValidationMessageFor(o => Model.CustomerName)<br />
-            @Html.DisplayFor(o => Model.Email) @Html.EditorFor(o => Model.Email) @Html.ValidationMessageFor(o => Model.Email)<br />
-            @Html.DisplayFor(o => Model.Phone) @Html.EditorFor(o => Model.Phone) @Html.ValidationMessageFor(o => Model.Phone)<br />
-            @Html.DisplayFor(o => Model.Content) @Html.TextAreaFor(o => Model.Content) @Html.ValidationMessageFor(o => Model.Content)<br />
+            @Html.DisplayNameFor(o => Model.Title) @Html.EditorFor(o => Model.Title) @Html.ValidationMessageFor(o => Model.Title)<br />
+            @Html.DisplayNameFor(o => Model.CustomerName) @Html.EditorFor(o => Model.CustomerName) @Html.ValidationMessageFor(o => Model.CustomerName)<br />
+            @Html.DisplayNameFor(o => Model.Email) @Html.EditorFor(o => Model.Email) @Html.ValidationMessageFor(o => Model.Email)<br />
+            @Html.DisplayNameFor(o => Model.Phone) @Html.EditorFor(o => Model.Phone) @Html.ValidationMessageFor(o => Model.Phone)<br />
+            @Html.DisplayNameFor(o => Model.Content) @Html.TextAreaFor(o => Model.Content) @Html.ValidationMessageFor(o => Model.Content)<br />
             <input type="submit" value="提交" id="btnSubmit" />
         }
     </div>
