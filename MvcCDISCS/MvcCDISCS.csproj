@@ -143,6 +143,10 @@
     <Compile Include="Migrations\201411270248076_InitialCreate.Designer.cs">
       <DependentUpon>201411270248076_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411280317357_productcategoryaddc.cs" />
+    <Compile Include="Migrations\201411280317357_productcategoryaddc.Designer.cs">
+      <DependentUpon>201411280317357_productcategoryaddc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\admin.cs">
       <SubType>Code</SubType>
@@ -559,7 +563,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Web - withoutDBAttach.config" />
     <Content Include="Views\PV\GetContact.cshtml" />
     <Content Include="Views\Shared\_Content.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -594,6 +597,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201411270248076_InitialCreate.resx">
       <DependentUpon>201411270248076_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411280317357_productcategoryaddc.resx">
+      <DependentUpon>201411280317357_productcategoryaddc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\zh-cn.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

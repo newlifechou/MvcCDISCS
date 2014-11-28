@@ -19,7 +19,8 @@ namespace MvcCDISCS.Models
         public string Photo { get; set; }
         [Required(ErrorMessage = "不能为空")]
         public string Memo { get; set; }
-
+        [Required(ErrorMessage = "不能为空")]
+        public string Priority { get; set; }
         public ICollection<product> Products { get; set; }
     }
 }
