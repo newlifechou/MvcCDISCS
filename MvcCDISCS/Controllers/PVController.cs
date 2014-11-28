@@ -36,12 +36,20 @@ namespace MvcCDISCS.Controllers
             ViewBag.FriendLinkList = new SelectList(db.friendlink, "SiteUrl", "SiteName");
             return PartialView();
         }
-
+        /// <summary>
+        /// GetProductCategoryMenu
+        /// </summary>
+        /// <returns></returns>
         public ActionResult GetProductCategoryMenu()
         {
             List<productcategory> pc = db.productcategory.OrderBy(o=>o.Priority).ToList();
             return PartialView(pc);
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using MvcCDISCS.Models;
 
+using PagedList;
+
 namespace MvcCDISCS.Controllers
 {
     public class HomeController : Controller
@@ -121,5 +123,10 @@ namespace MvcCDISCS.Controllers
             return View();
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }
