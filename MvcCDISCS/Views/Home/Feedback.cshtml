@@ -1,0 +1,38 @@
+﻿@model MvcCDISCS.Models.feedback
+@{
+    ViewBag.PageTitle = "Feedback";
+    Layout = "~/Views/Shared/_Content.cshtml";
+}
+@section cssmore2{
+    <link href="~/Content/form.css" rel="stylesheet" />
+}
+
+@section leftpart{
+    <div class="partmenu">
+        <h3>产品类别</h3>
+        <ul>
+            @Html.Action("GetProductCategoryMenu", "PV")
+        </ul>
+    </div>
+    <div class="partmenu">
+        <h3>联系我们</h3>
+        <ul>
+            <li><a href="~/Home/Contact">联系方式</a></li>
+        </ul>
+    </div>
+}
+
+@section rightpart{
+    <h2>@ViewBag.PageTitle</h2>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.DisplayFor(o => Model.Title) @Html.EditorFor(o => Model.Title) @Html.ValidationMessageFor(o => Model.Title)<br />
+            @Html.DisplayFor(o => Model.CustomerName) @Html.EditorFor(o => Model.CustomerName) @Html.ValidationMessageFor(o => Model.CustomerName)<br />
+            @Html.DisplayFor(o => Model.Email) @Html.EditorFor(o => Model.Email) @Html.ValidationMessageFor(o => Model.Email)<br />
+            @Html.DisplayFor(o => Model.Phone) @Html.EditorFor(o => Model.Phone) @Html.ValidationMessageFor(o => Model.Phone)<br />
+            @Html.DisplayFor(o => Model.Content) @Html.TextAreaFor(o => Model.Content) @Html.ValidationMessageFor(o => Model.Content)<br />
+            <input type="submit" value="提交" id="btnSubmit" />
+        }
+    </div>
+}

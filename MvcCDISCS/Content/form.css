@@ -1,0 +1,157 @@
+﻿/* forms */
+#rightpart fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #rightpart fieldset legend {
+        display: none;
+    }
+
+    #rightpart fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+        #rightpart fieldset ol li {
+            padding-bottom: 5px;
+        }
+
+#rightpart label {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+    #rightpart label.checkbox {
+        display: inline;
+    }
+
+#rightpart input, textarea {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 300px;
+}
+
+#rightpart textarea {
+    font-family: inherit;
+    width: 600px;
+    height: 250px;
+}
+
+#rightpart input:focus, textarea:focus {
+    border: 1px solid #7ac0da;
+}
+
+#rightpart input[type="checkbox"] {
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
+
+#rightpart input[type="submit"],
+#rightpart input[type="button"],
+#rightpart button {
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: auto;
+}
+
+#rightpart td input[type="submit"],
+#rightpart td input[type="button"],
+#rightpart td button {
+    font-size: 1em;
+    padding: 4px;
+    margin-right: 4px;
+}
+
+/* info and errors */
+#rightpart .message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+#rightpart .message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+#rightpart .message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+#rightpart .error {
+    color: #e80c4d;
+}
+
+/* styles for validation helpers */
+#rightpart .field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+#rightpart .field-validation-valid {
+    display: none;
+}
+
+#rightpart input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+#rightpart input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+#rightpart .validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#rightpart .validation-summary-valid {
+    display: none;
+}
+
+
+#rightpart table.tblist {
+    border-collapse: collapse;
+}
+
+    #rightpart table.tblist tr {
+        border-bottom: 1px solid #999;
+    }
+
+        #rightpart table.tblist tr.mo {
+            background-color: lightblue;
+        }
+
+    #rightpart table.tblist td {
+        padding: 5px 10px;
+    }
+
+#rightpart table.tblist2 {
+    border-collapse: collapse;
+}
+
+    #rightpart table.tblist2 td {
+        border: 1px solid #999;
+        padding: 5px 10px;
+    <!-- } -->
+

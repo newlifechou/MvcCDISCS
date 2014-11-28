@@ -1,6 +1,5 @@
-﻿@model MvcCDISCS.Models.product
-@{
-    ViewBag.PageTitle = "Product";
+﻿@{
+    ViewBag.PageTitle = "FeedbackSuccess";
     Layout = "~/Views/Shared/_Content.cshtml";
 }
 
@@ -15,14 +14,13 @@
         <h3>联系我们</h3>
         <ul>
             <li><a href="~/Home/Contact">联系方式</a></li>
-            <li><a href="~/Home/Feedback">网上留言</a></li>
         </ul>
     </div>
 }
+
 @section rightpart{
-    <h2>@Model.ProductName</h2>
-    <p>发布日期:@Model.PublishTime  阅读次数:@Model.ReadCount</p>
-    <div id="productdetailscontent">
-        @Html.Raw(Model.Content)
+    <h2>@ViewBag.PageTitle</h2>
+    <div>
+        <p>谢谢您的留言，我们会尽快给你反馈~</p>
     </div>
 }

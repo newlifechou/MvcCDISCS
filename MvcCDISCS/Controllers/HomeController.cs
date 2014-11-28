@@ -61,11 +61,46 @@ namespace MvcCDISCS.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult Product(int id=0)
+        public ActionResult Product(int id = 0)
         {
-            product p = db.product.Where(o => o.ProductId==id).Single();
+            product p = db.product.Where(o => o.ProductId == id).Single();
             return View(p);
         }
+        /// <summary>
+        /// Feedback
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Feedback()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Feedback(feedback fb)
+        {
+            if (fb==null)
+            {
+                return HttpNotFound();
+            }
+            fb.FeedbackTime = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                db.feedback.Add(fb);
+                db.SaveChanges();
+                return RedirectToAction("FeedbackSuccess", "Home");
+            }
+            return View(fb);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult FeedbackSuccess()
+        {
+            return View();
+        }
+
         /// <summary>
         /// Contact
         /// </summary>
