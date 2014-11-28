@@ -1,7 +1,7 @@
 ﻿@using PagedList.Mvc
 @model MvcCDISCS.Models.ProductCategoryPage
 @{
-    ViewBag.PageTitle = "ProductCategory";
+    ViewBag.PageTitle = Model.pc.CategoryName;
     Layout = "~/Views/Shared/_Content.cshtml";
 }
 @section cssmore2{
@@ -22,8 +22,8 @@
         </ul>
     </div>
 }
+
 @section rightpart{
-    <h2>@Model.pc.CategoryName</h2>
     <div id="topcontent">
         <img src="~/Images/category/@(Model.pc.Photo).jpg" alt="@Model.pc.CategoryName" id="titleimg" />
         <p>@Model.pc.Memo</p>
@@ -45,5 +45,6 @@
             <div>抱歉，该分类下暂时没有添加产品，请等待</div>
         }
     </div>
+    <!--分页内容-->
     @Html.PagedListPager(Model.products, page => Url.Action("ProductCategory", new { id=Model.pc.CategoryId,page}))
 }

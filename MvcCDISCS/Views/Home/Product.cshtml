@@ -1,6 +1,6 @@
 ﻿@model MvcCDISCS.Models.product
 @{
-    ViewBag.PageTitle = "Product";
+    ViewBag.PageTitle = Model.ProductName;
     Layout = "~/Views/Shared/_Content.cshtml";
 }
 
@@ -20,7 +20,6 @@
     </div>
 }
 @section rightpart{
-    <h2>@Model.ProductName</h2>
     <p>发布日期:@Model.PublishTime  阅读次数:@Model.ReadCount</p>
     <div id="productdetailscontent">
         @Html.Raw(Model.Content)

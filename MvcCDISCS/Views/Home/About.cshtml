@@ -1,7 +1,7 @@
 ﻿@model MvcCDISCS.Models.morebasicinfo
 
 @{
-    ViewBag.PageTitle = "About";
+    ViewBag.PageTitle = Model.ItemName;
     Layout = "~/Views/Shared/_Content.cshtml";
 }
 @section leftpart{
@@ -23,7 +23,6 @@
     </div>
 }
 @section rightpart{
-    <h2>@Model.ItemName</h2>
     <div>
         @Html.Raw(Model.ItemContent)
     </div>

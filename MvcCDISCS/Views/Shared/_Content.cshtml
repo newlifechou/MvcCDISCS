@@ -2,6 +2,8 @@
     //ViewBag.PageTitle = "Content";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<!--add more css here-->
 @section cssmore{
     <link href="~/Content/content.css" rel="stylesheet" type="text/css" />
     @RenderSection("cssmore2",required:false)
@@ -13,6 +15,7 @@
 
 <!--right part content-->
 <div id="rightpart">
+    <h2>@ViewBag.PageTitle</h2>
     @RenderSection("rightpart")
 </div>
 
