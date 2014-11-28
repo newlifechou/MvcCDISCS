@@ -25,14 +25,18 @@
 @section rightpart{
     <h2>@ViewBag.PageTitle</h2>
     <div>
+
         @using (Html.BeginForm())
         {
-            @Html.DisplayNameFor(o => Model.Title) @Html.EditorFor(o => Model.Title) @Html.ValidationMessageFor(o => Model.Title)<br />
-            @Html.DisplayNameFor(o => Model.CustomerName) @Html.EditorFor(o => Model.CustomerName) @Html.ValidationMessageFor(o => Model.CustomerName)<br />
-            @Html.DisplayNameFor(o => Model.Email) @Html.EditorFor(o => Model.Email) @Html.ValidationMessageFor(o => Model.Email)<br />
-            @Html.DisplayNameFor(o => Model.Phone) @Html.EditorFor(o => Model.Phone) @Html.ValidationMessageFor(o => Model.Phone)<br />
-            @Html.DisplayNameFor(o => Model.Content) @Html.TextAreaFor(o => Model.Content) @Html.ValidationMessageFor(o => Model.Content)<br />
+            <table>
+                <tr><td>@Html.DisplayNameFor(o => Model.Title)</td><td>@Html.EditorFor(o => Model.Title)@Html.ValidationMessageFor(o => Model.Title)</td></tr>
+                <tr><td>@Html.DisplayNameFor(o => Model.CustomerName) </td><td>@Html.EditorFor(o => Model.CustomerName)@Html.ValidationMessageFor(o => Model.CustomerName)</td></tr>
+                <tr><td>@Html.DisplayNameFor(o => Model.Email) </td><td>@Html.EditorFor(o => Model.Email)@Html.ValidationMessageFor(o => Model.Email)</td></tr>
+                <tr><td>@Html.DisplayNameFor(o => Model.Phone)</td><td>@Html.EditorFor(o => Model.Phone)@Html.ValidationMessageFor(o => Model.Phone)</td></tr>
+                <tr><td>@Html.DisplayNameFor(o => Model.Content) </td><td>@Html.TextAreaFor(o => Model.Content) @Html.ValidationMessageFor(o => Model.Content)</td></tr>
+            </table>
             <input type="submit" value="提交" id="btnSubmit" />
         }
+
     </div>
 }

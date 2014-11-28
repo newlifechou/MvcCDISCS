@@ -22,6 +22,7 @@ namespace MvcCDISCS.Models
         [Display(Name = "留言时间")]
         public DateTime FeedbackTime { get; set; }
         [Required(ErrorMessage = "不能为空")]
+        [RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "这不是电子邮件格式")]
         [Display(Name = "Email")]
         public string Email { get; set; }
         [Required(ErrorMessage = "不能为空")]
