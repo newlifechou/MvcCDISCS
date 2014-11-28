@@ -50,7 +50,7 @@
         <ul class="categorylist">
             @foreach (var item in Model.ProductCategories)
             {
-                <li class="borderme">
+                <li class="roundborder">
                     <img src="~/Images/category/@(item.Photo).jpg" alt="@item.CategoryName" />
                     <div>
                         <h5>@item.CategoryName<span><a href="~/Home/ProductCategory/@item.CategoryId">More</a></span> </h5>
@@ -65,7 +65,7 @@
     </div>
     <div id="rightarea">
         <h3 class="titleh3">公司简介<span><a href="~/Home/About/1">更多</a></span></h3>
-        <div id="about" class="borderme">
+        <div id="about" class="roundborder">
             <div>
                 <img src="~/Images/cdiscs/aboutphoto.jpg" alt="about" />
                 <div>
@@ -78,7 +78,7 @@
 <!--考虑不要这一块了，主页太长了，这部分内容也和产品分类重复了-->
 @*<div id="bottomarea">
     <h3 class="titleh3">产品展示<span><a href="~/Home/ProductCategory/2">更多</a></span></h3>
-    <div id="productslide" class="borderme">
+    <div id="productslide" class="roundborder">
         <img id="leftarrow" class="arrow" src="~/Images/left-arrow.png" alt="left-arrow" />
         <ul>
             <li>

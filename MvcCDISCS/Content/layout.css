@@ -55,7 +55,7 @@ table {
 */
 
 body {
-    background-color:#C6C6C6;
+    background-color: #C6C6C6;
     /*一直显示滚动条*/
     overflow-y: scroll;
 }
@@ -137,6 +137,22 @@ ul#mainnav {
         overflow: hidden;
         min-height: 500px;
     }
+
+
+/*全局的边框设置*/
+/*general border for the box*/
+.roundborder {
+    border: 2px solid #e4e4e4;
+    border-radius: 5px;
+    background-color: #EFEFEF;
+}
+
+.rectborder {
+    border: 2px solid #e4e4e4;
+    background-color: #EFEFEF;
+}
+
+
 
 /*
     footer 部分设置

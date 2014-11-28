@@ -111,13 +111,6 @@
                 color:blue;
             }
 
-/*general border for the box*/
-.borderme {
-    border: 3px solid #e4e4e4;
-    border-radius: 5px;
-    background-color: #EFEFEF;
-}
-
 h3.titleh3 {
     background-color: #0767B2;
     color: white;
