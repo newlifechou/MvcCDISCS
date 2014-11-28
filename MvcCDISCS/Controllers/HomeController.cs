@@ -49,14 +49,19 @@ namespace MvcCDISCS.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult ProductCategory(int id = 0)
+        public ActionResult ProductCategory(int id = 0,int page=1)
         {
             if (id == 0)
             {
                 return HttpNotFound();
             }
-            productcategory pc = db.productcategory.Include("Products").Where(o => o.CategoryId == id).Single();
-            return View(pc);
+            ProductCategoryPage pcp = new ProductCategoryPage();
+            //分页的实现
+            pcp.pc = db.productcategory.Include("Products").Where(o => o.CategoryId == id).Single();
+            pcp.products = pcp.pc.Products.ToPagedList(page, 8);
+            //清空pc.Products
+            pcp.pc.Products = null;
+            return View(pcp);
         }
         /// <summary>
         /// Product

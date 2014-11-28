@@ -1,9 +1,12 @@
-﻿@model MvcCDISCS.Models.productcategory
+﻿@using PagedList.Mvc
+@model MvcCDISCS.Models.ProductCategoryPage
 @{
     ViewBag.PageTitle = "ProductCategory";
     Layout = "~/Views/Shared/_Content.cshtml";
 }
-
+@section cssmore2{
+    <link href="~/Content/PagedList.css" rel="stylesheet"  type="text/css"/>
+}
 @section leftpart{
     <div class="partmenu">
         <h3>产品类别</h3>
@@ -20,16 +23,16 @@
     </div>
 }
 @section rightpart{
-    <h2>@Model.CategoryName</h2>
+    <h2>@Model.pc.CategoryName</h2>
     <div id="topcontent">
-        <img src="~/Images/@(Model.Photo).jpg" alt="@Model.CategoryName" id="titleimg" />
-        <p>@Model.Memo</p>
+        <img src="~/Images/@(Model.pc.Photo).jpg" alt="@Model.pc.CategoryName" id="titleimg" />
+        <p>@Model.pc.Memo</p>
     </div>
     <div id="productlist">
         <!--display the products under the category list-->
-        @if (Model.Products.Count > 0)
+        @if (Model.products.Count > 0)
         {
-            foreach (var item in Model.Products)
+            foreach (var item in Model.products)
             {
                 <a href="~/Home/Product/@item.ProductId">
                     <img src="~/Images/product/@(item.Photo).jpg" alt="@item.Photo" />
@@ -42,4 +45,5 @@
             <div>抱歉，该分类下暂时没有添加产品，请等待</div>
         }
     </div>
+    @Html.PagedListPager(Model.products, page => Url.Action("ProductCategory", new { id=Model.pc.CategoryId,page}))
 }
