@@ -9,7 +9,6 @@
     <!--2014-11-25-->
     <title>@ViewBag.PageTitle</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
     <!--load more css here-->
     @RenderSection("cssmore", required: false)
 </head>
@@ -64,6 +63,7 @@
         </div>
     </div>
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
     @RenderSection("scripts", required: false)
     <!--own script-->
     <!--something wrong with it, check it later-->
