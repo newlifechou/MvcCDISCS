@@ -23,3 +23,6 @@
             width: 300px;
             padding: 15px 8px;
         }
+        #loginarea input:focus{
+            border:1px solid orange;
+        }
