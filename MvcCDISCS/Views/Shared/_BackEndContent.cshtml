@@ -10,10 +10,33 @@
     @RenderSection("cssmore2", required: false)
 }
 
-
+<!--user status will be display here-->
+<div id="be-userstatus" class="roundborder">
+    @Html.Action("CurrentUser","Account")
+</div>
 <!--leftpart menu-->
 <div id="leftpart">
-    @RenderSection("leftpart")
+    @*@RenderSection("leftpart")*@
+    <div class="partmenu">
+        <h3>基本信息</h3>
+        <ul>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+        </ul>
+    </div>
+    <div class="partmenu">
+        <h3>产品信息</h3>
+        <ul>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">公司简介</a></li>
+        </ul>
+    </div>
 </div>
 
 
