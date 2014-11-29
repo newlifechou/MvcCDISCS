@@ -194,7 +194,9 @@
     <Compile Include="ueditor\net\App_Code\UploadHandler.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\content.css" />
+    <Content Include="Content\backend.css" />
+    <Content Include="Content\common.css" />
+    <Content Include="Content\frontend.css" />
     <Content Include="Content\form.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\layout.css" />
@@ -598,7 +600,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\PV\GetContact.cshtml" />
-    <Content Include="Views\Shared\_Content.cshtml" />
+    <Content Include="Views\Shared\_FrontEndContent.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\PV\GetFriendLink.cshtml" />
     <Content Include="Views\Home\ProductCategory.cshtml" />
@@ -619,6 +621,7 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Shared\_BackEndContent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

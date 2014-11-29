@@ -1,0 +1,29 @@
+﻿@{
+    //ViewBag.PageTitle = "Content";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--add more css here-->
+@section cssmore{
+    <link href="~/Content/common.css" rel="stylesheet" type="text/css"/>
+    <link href="~/Content/frontend.css" rel="stylesheet" type="text/css" />
+    @RenderSection("cssmore2", required: false)
+}
+
+
+<!--leftpart menu-->
+<div id="leftpart">
+    @RenderSection("leftpart")
+</div>
+
+
+<!--right part content-->
+<div id="rightpart" class="roundborder">
+    <h2>@ViewBag.PageTitle</h2>
+    @RenderSection("rightpart")
+</div>
+
+<!--scripts down here-->
+@section scripts{
+    @RenderSection("scripts2", required: false)
+}

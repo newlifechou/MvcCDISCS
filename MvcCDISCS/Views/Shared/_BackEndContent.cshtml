@@ -5,13 +5,17 @@
 
 <!--add more css here-->
 @section cssmore{
-    <link href="~/Content/content.css" rel="stylesheet" type="text/css" />
-    @RenderSection("cssmore2",required:false)
+    <link href="~/Content/common.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/backend.css" rel="stylesheet" type="text/css" />
+    @RenderSection("cssmore2", required: false)
 }
+
+
 <!--leftpart menu-->
 <div id="leftpart">
     @RenderSection("leftpart")
 </div>
+
 
 <!--right part content-->
 <div id="rightpart" class="roundborder">
@@ -21,5 +25,5 @@
 
 <!--scripts down here-->
 @section scripts{
-    @RenderSection("scripts2",required:false)
+    @RenderSection("scripts2", required: false)
 }
