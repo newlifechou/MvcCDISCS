@@ -10,17 +10,21 @@
         border: 2px solid #e4e4e4;
         background-color: #efefef;
         border-radius: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
     }
 
         #leftpart .partmenu h3 {
             padding: 10px 0;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.1em;
             /*background-color: #0767B2;*/
             border-bottom: 1px solid #999;
+            color:#0767B2;
         }
 
+        #leftpart .partmenu ul{
+            background-color:white;
+        }
         #leftpart .partmenu ul li a {
             display: block;
             padding: 10px;
@@ -29,6 +33,7 @@
 
             #leftpart .partmenu ul li a:hover {
                 background: orange;
+                color:black;
                 /*border-left: 6px solid #000;
                 border-right: 6px solid #000;*/
             }
@@ -45,6 +50,8 @@
 
     #rightpart h2 {
         font-size: 1.2em;
-        padding: 5px 0;
-        color: blue;
+        padding: 0 0 10px 0;
+        color: #0767B2;
+        border-bottom:1px solid #999;
+        margin-bottom:10px;
     }

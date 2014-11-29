@@ -47,6 +47,7 @@ namespace MvcCDISCS.Controllers
         /// log out
         /// </summary>
         /// <returns></returns>
+        [Authorize]
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
@@ -64,9 +65,7 @@ namespace MvcCDISCS.Controllers
             return PartialView();
         }
 
-
-
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();
