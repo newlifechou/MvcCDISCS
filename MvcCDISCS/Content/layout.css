@@ -143,7 +143,7 @@ ul#mainnav {
 /*general border for the box*/
 .roundborder {
     border: 2px solid #e4e4e4;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #EFEFEF;
 }
 

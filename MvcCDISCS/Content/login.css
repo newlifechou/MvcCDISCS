@@ -6,11 +6,12 @@
     text-align: center;
     padding: 40px 20px;
 }
+
     #loginarea input {
         border: 1px solid #999;
         width: 300px;
         border-radius: 5px;
-        font-size:1.2em;
+        font-size: 1.2em;
     }
 
         #loginarea input[type=text], #loginarea input[type=password] {
@@ -24,11 +25,18 @@
             width: 300px;
             padding: 15px 8px;
         }
-        #loginarea input:focus{
-            border:1px solid orange;
+
+        #loginarea input:focus {
+            border: 1px solid orange;
         }
 
-        #loginarea .validation-summary-errors{
-            margin-top:10px;
-            color:red;
+        #loginarea input[type=text]:hover, #loginarea input[type=password]:hover {
+            background: #e4e4e4;
         }
+        #loginarea input[type=submit]:hover{
+            background-color:lightblue;
+        }
+    #loginarea .validation-summary-errors {
+        margin-top: 10px;
+        color: red;
+    }

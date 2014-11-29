@@ -79,6 +79,7 @@
     overflow: hidden;
     background-color: #FEFECC;
     border: 1px solid #FED22F;
+    border-radius:4px;
 }
 
     #notice p.noticeleft {
