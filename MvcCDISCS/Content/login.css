@@ -10,6 +10,7 @@
         border: 1px solid #999;
         width: 300px;
         border-radius: 5px;
+        font-size:1.2em;
     }
 
         #loginarea input[type=text], #loginarea input[type=password] {
@@ -25,4 +26,9 @@
         }
         #loginarea input:focus{
             border:1px solid orange;
+        }
+
+        #loginarea .validation-summary-errors{
+            margin-top:10px;
+            color:red;
         }

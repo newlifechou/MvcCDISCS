@@ -36,8 +36,10 @@ namespace MvcCDISCS.Controllers
                 else
                 {
                     ModelState.AddModelError("", "用户名或者密码错误");
+                    return View(user);
                 }
             }
+            ModelState.AddModelError("", "请正确填写用户名或者密码");
             return View(user);
         }
 
