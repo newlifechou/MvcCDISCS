@@ -1,48 +1,46 @@
 ﻿/*front end unique style*/
 /*Category Top*/
-div#topcontent {
-    padding: 5px;
+#rightpartcontent #topcontent {
     overflow: hidden;
-    border-bottom:1px solid #999;
+    border-bottom: 1px solid #999;
 }
 
-    div#topcontent img#titleimg {
+   #rightpartcontent  #topcontent img#titleimg {
         width: 250px;
-        height: 160px;
+        height: 180px;
         padding: 5px;
         background-color: white;
         float: left;
     }
 
-    div#topcontent p {
+  div#rightpartcontent  div#topcontent p {
         margin-left: 270px;
     }
 
 /*Category Product List*/
-div#productlist {
-    padding: 5px;
+div#rightpartcontent div#productlist {
     overflow: hidden;
 }
 
-    div#productlist a {
+    #rightpartcontent div#productlist a {
         display: block;
         float: left;
-        margin: 0 13px 10px 0;
+        margin: 0 8px 10px 0;
         padding: 5px;
         background-color: white;
     }
 
-        div#productlist a:hover {
+        #rightpartcontent #productlist a:hover {
             background-color: lightblue;
         }
 
-        div#productlist a img {
+        #rightpartcontent #productlist a img {
             display: block;
             width: 180px;
             height: 130px;
         }
 
-        div#productlist a p {
+        #rightpartcontent #productlist a p {
             text-align: center;
             padding: 5px 0;
             background-color: #999;
@@ -52,46 +50,49 @@ div#productlist {
 
 
 /*Contact*/
-#contactcontent {
+#rightpartcontent #contactcontent {
+    /*none the list style*/
     list-style: none;
 }
 
 /*map part on contact page*/
-#contactmapcontent {
+#rightpartcontent #contactmapcontent {
     margin-top: 30px;
     border: 1px solid #999;
     padding: 10px 5px;
 }
 
 /*Product*/
-#productdetailscontent {
-    margin-top: 5px;
-    padding-top: 5px;
+#rightpartcontent .publishday{
+    color:orange;
+}
+#rightpartcontent #productdetailscontent {
+    padding:10px 0;
     border-top: 1px solid #999;
 }
 
 /*Service*/
-#servicecontent .serviceitem {
+#rightpartcontent .serviceitem {
     border: 1px solid #999;
     padding: 10px;
     margin-top: 10px;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-    #servicecontent .serviceitem h5 {
-        padding: 5px 0;
-        font-size: 1.2em;
-        border-bottom: 1px solid #999;
-    }
+#rightpartcontent .serviceitem .serviceitemheader {
+    padding: 5px 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid #999;
+}
 
-    #servicecontent .serviceitem img.servicephoto {
-        margin: 10px 0;
-        padding: 5px;
-        background: white;
-        float:left;
-    }
+#rightpartcontent .serviceitem .serviceitemphoto {
+    margin: 10px 0;
+    padding: 5px;
+    background: white;
+    float: left;
+}
 
-    #servicecontent .serviceitem p.servicep {
-        padding: 10px 0;
-        margin-left:220px;
-    }
+#rightpartcontent .serviceitem .serviceitemcontent {
+    padding: 10px 0;
+    margin-left: 220px;
+}

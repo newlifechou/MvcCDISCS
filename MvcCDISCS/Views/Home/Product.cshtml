@@ -20,7 +20,7 @@
     </div>
 }
 @section rightpart{
-    <p>发布日期:@Model.PublishTime  阅读次数:@Model.ReadCount</p>
+    <p class="publishday">发布日期:@Model.PublishTime  阅读次数:@Model.ReadCount</p>
     <div id="productdetailscontent">
         @Html.Raw(Model.Content)
     </div>
