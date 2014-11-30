@@ -1,0 +1,55 @@
+﻿@model MvcCDISCS.Models.service
+
+@{
+    ViewBag.PageTitle = "Create";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+
+@section rightpart{
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>service</legend>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Title)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Photo)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Photo)
+                @Html.ValidationMessageFor(model => model.Photo)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Content)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.Content)
+                <script>
+                    var ue = UE.getEditor('Content');
+                </script>
+                @Html.ValidationMessageFor(model => model.Content)
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("返回列表", "Index")
+    </div>
+
+}
+

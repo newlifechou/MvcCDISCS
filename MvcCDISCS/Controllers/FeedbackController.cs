@@ -15,7 +15,7 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index()
         {
-            List<feedback> fbs = db.feedback.OrderBy(o => o.FeedbackTime).ToList();
+            List<feedback> fbs = db.feedback.OrderByDescending(o => o.FeedbackTime).ToList();
             return View(fbs);
         }
 

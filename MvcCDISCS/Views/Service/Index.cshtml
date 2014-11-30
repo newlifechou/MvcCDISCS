@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MvcCDISCS.Models.service>
+
+@{
+    ViewBag.PageTitle = "Index";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+
+@section rightpart{
+    <p>@Html.ActionLink("Create", "Create") </p>
+    <table class="edit-table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+}
+
