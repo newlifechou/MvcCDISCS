@@ -58,7 +58,7 @@ namespace MvcCDISCS.Controllers
             ProductCategoryPage pcp = new ProductCategoryPage();
             //分页的实现
             pcp.pc = db.productcategory.Include("Products").Where(o => o.CategoryId == id).Single();
-            pcp.products = pcp.pc.Products.ToPagedList(page, 8);
+            pcp.products = pcp.pc.Products.ToPagedList(page, 9);
             //清空pc.Products
             pcp.pc.Products = null;
             return View(pcp);

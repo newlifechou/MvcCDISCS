@@ -305,6 +305,10 @@
     <Content Include="Images\BCode.jpg" />
     <Content Include="Images\body_bg.jpg" />
     <Content Include="Images\category\categoryimage.jpg" />
+    <Content Include="Images\icon\abouticon.png" />
+    <Content Include="Images\icon\idea-16px.png" />
+    <Content Include="Images\icon\idea-32px.png" />
+    <Content Include="Images\icon\warning.png" />
     <Content Include="Images\left-arrow.png" />
     <Content Include="Images\logo.gif" />
     <Content Include="Images\service\productphoto.jpg" />

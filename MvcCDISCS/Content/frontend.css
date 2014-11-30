@@ -27,14 +27,14 @@
 }
 
     #rightpartcontent #topcontent img#titleimg {
-        width: 250px;
-        height: 180px;
+        width: 200px;
+        height: 150px;
         padding: 5px;
         float: left;
     }
 
 div#rightpartcontent div#topcontent p {
-    margin-left: 270px;
+    margin-left: 220px;
 }
 
 /*Category Product List*/
@@ -46,7 +46,7 @@ div#rightpartcontent div#productlist {
 #rightpartcontent div#productlist a {
     display: block;
     float: left;
-    margin: 0 8px 10px 0;
+    margin: 0 15px 10px 0;
     padding: 5px;
 }
 
@@ -56,8 +56,8 @@ div#rightpartcontent div#productlist {
 
 #rightpartcontent #productlist a img {
     display: block;
-    width: 180px;
-    height: 130px;
+    width: 240px;
+    height: 160px;
 }
 
 #rightpartcontent #productlist a p {
@@ -117,3 +117,8 @@ div#rightpartcontent div#productlist {
         padding: 10px 0;
         margin-left: 220px;
     }
+
+/*Feedback*/
+#rightpartcontent #feedbacktip{
+    margin-bottom:20px;
+}

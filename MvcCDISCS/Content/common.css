@@ -61,3 +61,17 @@
     #rightpart .smallphotobg {
         background-color: lightblue;
     }
+
+
+/*帮助提示*/
+.helptip {
+    padding: 10px;
+    font-size: 0.8em;
+    color: #333;
+    background-color: #FEFECC;
+}
+
+    .helptip p.light {
+        padding-left: 20px;
+        background: url('../Images/icon/idea-16px.png') center left no-repeat;
+    }

@@ -39,7 +39,7 @@
 #rightpart textarea {
     font-family: inherit;
     width:600px;
-    height: 250px;
+    height: 150px;
 }
 
 #rightpart input:focus, textarea:focus {
