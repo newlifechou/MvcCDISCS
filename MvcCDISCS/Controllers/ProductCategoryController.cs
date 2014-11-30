@@ -40,6 +40,7 @@ namespace MvcCDISCS.Controllers
         // POST: /ProductCategory/Create
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Create(productcategory pc)
         {
             try
@@ -75,6 +76,7 @@ namespace MvcCDISCS.Controllers
         // POST: /ProductCategory/Edit/5
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Edit(productcategory pc)
         {
             try
