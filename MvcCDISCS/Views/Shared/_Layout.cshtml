@@ -66,9 +66,11 @@
     <!--scripts down footer-->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/modernizr")
-    @RenderSection("scripts", required: false)
-    @Scripts.Render("~/bundles/jqueryval");
+    @Scripts.Render("~/bundles/jqueryval")
+    <!--for ajax-->
+    @Scripts.Render("~/bundles/jqueryajax")
     <!--own script-->
+    @RenderSection("scripts", required: false)
     <!--something wrong with it, check it later-->
     @*<script src="~/Scripts/js/layout.js"></script>*@
 </body>

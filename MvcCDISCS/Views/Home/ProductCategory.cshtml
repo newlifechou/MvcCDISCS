@@ -16,6 +16,12 @@
         </ul>
     </div>
     <div class="partmenu">
+        <h3 class="titlebar">产品搜索</h3>
+        <ul>
+            <li><a href="~/Home/SearchPage">产品搜索</a></li>
+        </ul>
+    </div>
+    <div class="partmenu">
         <h3 class="titlebar">联系我们</h3>
         <ul>
             <li><a href="~/Home/Contact">联系方式</a></li>
@@ -25,10 +31,6 @@
 }
 
 @section rightpart{
-    <!--searcharea-->
-    <div id="searcharea" class="roundborder">
-        <input type="text" value="" placeholder="可以在此输入你要搜索的产品关键词进行搜索" /><input type="button" value="搜索" />
-    </div>
     <div id="topcontent">
         <img src="~/Images/category/@(Model.pc.Photo).jpg" alt="@Model.pc.CategoryName" id="titleimg" class="smallphotobg" />
         <p>@Model.pc.Memo</p>

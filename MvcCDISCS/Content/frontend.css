@@ -2,7 +2,7 @@
 /*Category Top*/
 #rightpartcontent #searcharea {
     background-color: white;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
@@ -16,7 +16,7 @@
             color:#999;
         }
 
-        #rightpartcontent #searcharea input[type="button"] {
+        #rightpartcontent #searcharea input[type="submit"] {
             padding: 5px 20px;
         }
 
@@ -51,7 +51,7 @@ div#rightpartcontent div#productlist {
 }
 
 #rightpartcontent #productlist a:hover {
-    background-color: lightblue;
+    background-color: orange;
 }
 
 #rightpartcontent #productlist a img {
@@ -64,6 +64,7 @@ div#rightpartcontent div#productlist {
     text-align: center;
     padding: 5px 0;
     background-color: #999;
+    font-size:0.8em;
 }
 
 
@@ -123,4 +124,12 @@ div#rightpartcontent div#productlist {
 /*Feedback*/
 #rightpartcontent #feedbacktip{
     margin-bottom:20px;
+}
+
+/*SearchPage*/
+#productsearchlist li{
+    padding:5px 0;
+}
+#productsearchlist ul li a span{
+    color:blue
 }

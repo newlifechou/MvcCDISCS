@@ -311,6 +311,7 @@
     <Content Include="Images\icon\idea-32px.png" />
     <Content Include="Images\icon\warning.png" />
     <Content Include="Images\left-arrow.png" />
+    <Content Include="Images\loading.gif" />
     <Content Include="Images\logo.gif" />
     <Content Include="Images\service\productphoto.jpg" />
     <Content Include="Images\product\product.jpg" />
@@ -655,6 +656,8 @@
     <Content Include="Views\BasicInfo\Edit.cshtml" />
     <Content Include="Views\Admin\EditSuccess.cshtml" />
     <Content Include="Views\MoreBasicInfo\Edit.cshtml" />
+    <Content Include="Views\Home\SearchProduct.cshtml" />
+    <Content Include="Views\Home\SearchPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

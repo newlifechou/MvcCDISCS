@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcCDISCS.Models;
+using System.Threading;
 
 using PagedList;
 
@@ -63,6 +64,33 @@ namespace MvcCDISCS.Controllers
             pcp.pc.Products = null;
             return View(pcp);
         }
+
+        /// <summary>
+        /// 转到搜索页面
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult SearchPage()
+        {
+            return View();
+        }
+        /// <summary>
+        /// search product as required  for ajax use
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult SearchProduct(string query,int page=1)
+        {
+            ViewBag.QueryString = query;
+            //如果查询字符串为null或者空，返回产品类别首页
+            if (string.IsNullOrEmpty(query))
+            {
+                return Content("请输入关键词后再查询");
+            }
+            //TODO:模拟网络延迟
+            Thread.Sleep(1500);
+            List<product> products = db.product.Include("Category").Where(o => o.ProductName.Contains(query)).OrderBy(o => o.ProductId).ToList();
+            return PartialView(products);
+        }
+
         /// <summary>
         /// Product
         /// </summary>

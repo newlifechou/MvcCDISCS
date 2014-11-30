@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.PageTitle = "SearchPage";
+    Layout = "~/Views/Shared/_FrontEndContent.cshtml";
+}
+
+@section cssmore2{
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/form.css" rel="stylesheet" type="text/css" />
+    <script>
+        function searchFailed() {
+            $("#productcategorycontent").html("对不起，搜索出现错误~")
+        }
+    </script>
+}
+@section leftpart{
+    <div class="partmenu">
+        <h3 class="titlebar">产品类别</h3>
+        <ul>
+            @Html.Action("GetProductCategoryMenu", "PV")
+        </ul>
+    </div>
+    <div class="partmenu">
+        <h3 class="titlebar">联系我们</h3>
+        <ul>
+            <li><a href="~/Home/Contact">联系方式</a></li>
+            <li><a href="~/Home/Feedback">网上留言</a></li>
+        </ul>
+    </div>
+}
+
+@section rightpart{
+    <!--searcharea-->
+    <div id="searcharea" class="roundborder">
+
+        <!--ajax form-->
+        @using (Ajax.BeginForm("SearchProduct", "Home", new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "GET",
+            OnFailure = "searchFailed",
+            LoadingElementId = "ajax-loader",
+            UpdateTargetId = "productcategorycontent"
+        }))
+        {
+            <input type="text" value="" placeholder="可以在此输入你要搜索的产品关键词进行搜索" name="query" /><input type="submit" value="搜索" />
+            <span id="ajax-loader" style="display:none;">正在搜索，请稍后……</span>
+        }
+    </div>
+    <div id="productcategorycontent">
+
+    </div>
+}

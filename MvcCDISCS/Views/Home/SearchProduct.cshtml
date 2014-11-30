@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MvcCDISCS.Models.product>
+<div id="productsearchlist">
+    <!--display the products under the category list-->
+    @if (Model.Count() > 0)
+    {
+        <p>搜索到<span>@Model.Count()</span>条结果，具体如下：</p>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="~/Home/Product/@(item.ProductId)">
+                        [@(item.Category.CategoryName)]: <span>@(item.ProductName)</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <div>抱歉，没有找到您要的产品</div>
+    }
+</div>
