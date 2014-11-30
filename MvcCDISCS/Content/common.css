@@ -11,9 +11,10 @@
     }
 
         #leftpart .partmenu h3 {
-            padding: 10px 0;
             text-align: center;
-            color: #0767B2;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: none;
         }
 
         #leftpart .partmenu ul {
@@ -25,7 +26,7 @@
 
             #leftpart .partmenu ul li a {
                 display: block;
-                padding: 8px;
+                padding: 5px 8px;
                 text-align: center;
             }
 
@@ -44,15 +45,14 @@
     min-height: 250px;
 }
 
-    #rightpart #rightpartheader {
-        color: #0767B2;
-    }
     /*rightpartheader*/
-    #rightpart #rightpartheader, #rightpart #rightpartcontent {
-        padding: 10px;
+    #rightpart #rightpartheader {
     }
+
     /*rightpartcontent*/
     #rightpart #rightpartcontent {
+        margin-top: 5px;
+        padding: 10px;
         background-color: white;
         list-style: round;
     }

@@ -155,8 +155,8 @@ ul#mainnav {
 .titlebar {
     border: 2px solid #e4e4e4;
     background-color: #EFEFEF;
-    padding: 10px;
-    margin-bottom: 5px;
+    /*color:#0767B2;*/
+    padding: 8px;
     border-radius: 4px;
     font-size:1.1em;
 }
