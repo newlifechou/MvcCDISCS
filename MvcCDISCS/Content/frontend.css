@@ -78,8 +78,8 @@ div#rightpartcontent div#productlist {
 /*map part on contact page*/
 #rightpartcontent #contactmapcontent {
     margin-top: 30px;
-    border: 1px solid #999;
-    padding: 10px 5px;
+    /*border: 1px solid #999;
+    padding: 10px 5px;*/
 }
 
 /*Product*/

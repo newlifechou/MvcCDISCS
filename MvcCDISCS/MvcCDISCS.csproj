@@ -305,6 +305,7 @@
     <Content Include="Images\BCode.jpg" />
     <Content Include="Images\body_bg.jpg" />
     <Content Include="Images\category\categoryimage.jpg" />
+    <Content Include="Images\cdiscs\map.png" />
     <Content Include="Images\icon\abouticon.png" />
     <Content Include="Images\icon\idea-16px.png" />
     <Content Include="Images\icon\idea-32px.png" />
