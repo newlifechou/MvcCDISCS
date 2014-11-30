@@ -1,0 +1,53 @@
+﻿@model MvcCDISCS.Models.flash
+
+@{
+    ViewBag.PageTitle = "Create";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+
+@section rightpart{
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>flash</legend>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.SlidePhoto)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.SlidePhoto)
+                @Html.ValidationMessageFor(model => model.SlidePhoto)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Memo)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Memo)
+                @Html.ValidationMessageFor(model => model.Memo)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Priority)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Priority)
+                @Html.ValidationMessageFor(model => model.Priority)
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    }
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
+
+
+
+

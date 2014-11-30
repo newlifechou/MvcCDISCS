@@ -154,6 +154,7 @@
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\PVController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\SlideController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -683,6 +684,9 @@
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Slide\Index.cshtml" />
+    <Content Include="Views\Slide\Create.cshtml" />
+    <Content Include="Views\Slide\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
