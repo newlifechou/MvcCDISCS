@@ -3,13 +3,13 @@
 #rightpartcontent #topcontent {
     overflow: hidden;
     border-bottom: 1px solid #999;
+    padding-bottom:10px;
 }
 
    #rightpartcontent  #topcontent img#titleimg {
         width: 250px;
         height: 180px;
         padding: 5px;
-        background-color: white;
         float: left;
     }
 
@@ -19,6 +19,7 @@
 
 /*Category Product List*/
 div#rightpartcontent div#productlist {
+    padding-top:10px;
     overflow: hidden;
 }
 
@@ -27,7 +28,6 @@ div#rightpartcontent div#productlist {
         float: left;
         margin: 0 8px 10px 0;
         padding: 5px;
-        background-color: white;
     }
 
         #rightpartcontent #productlist a:hover {
@@ -88,7 +88,6 @@ div#rightpartcontent div#productlist {
 #rightpartcontent .serviceitem .serviceitemphoto {
     margin: 10px 0;
     padding: 5px;
-    background: white;
     float: left;
 }
 

@@ -65,3 +65,7 @@
         background-color: white;
         list-style:round;
     }
+    /*give small photo on the content page the same background*/
+    #rightpart .smallphotobg{
+        background-color:lightblue;
+    }

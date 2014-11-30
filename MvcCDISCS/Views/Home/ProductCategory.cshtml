@@ -25,7 +25,7 @@
 
 @section rightpart{
     <div id="topcontent">
-        <img src="~/Images/category/@(Model.pc.Photo).jpg" alt="@Model.pc.CategoryName" id="titleimg" />
+        <img src="~/Images/category/@(Model.pc.Photo).jpg" alt="@Model.pc.CategoryName" id="titleimg" class="smallphotobg" />
         <p>@Model.pc.Memo</p>
     </div>
     <div id="productlist">
@@ -34,7 +34,7 @@
         {
             foreach (var item in Model.products)
             {
-                <a href="~/Home/Product/@item.ProductId">
+                <a href="~/Home/Product/@item.ProductId" class="smallphotobg">
                     <img src="~/Images/product/@(item.Photo).jpg" alt="@item.Photo" />
                     <p>@item.ProductName</p>
                 </a>
