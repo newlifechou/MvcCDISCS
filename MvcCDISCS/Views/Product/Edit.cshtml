@@ -1,0 +1,80 @@
+﻿@model MvcCDISCS.Models.product
+
+@{
+    ViewBag.PageTitle = "Edit";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+
+@section rightpart{
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>product</legend>
+
+            @Html.HiddenFor(model => model.ProductId)
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.ProductName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ProductName)
+                @Html.ValidationMessageFor(model => model.ProductName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.CategoryId)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("categoryID", String.Empty)
+                @Html.ValidationMessageFor(model => model.CategoryId)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.PublishTime)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.PublishTime)
+                @Html.ValidationMessageFor(model => model.PublishTime)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.ReadCount)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ReadCount)
+                @Html.ValidationMessageFor(model => model.ReadCount)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Photo)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Photo)
+                @Html.ValidationMessageFor(model => model.Photo)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Content)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.Content)
+                <script>
+                var ue = UE.getEditor('Content')
+                </script>
+                @Html.ValidationMessageFor(model => model.Content)
+            </div>
+
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+        </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+}
+

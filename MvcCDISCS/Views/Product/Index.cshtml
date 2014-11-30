@@ -1,10 +1,13 @@
-﻿@model IEnumerable<MvcCDISCS.Models.product>
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MvcCDISCS.Models.product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.PageTitle = "Index";
     Layout = "~/Views/Shared/_BackEndContent.cshtml";
 }
-
+@section cssmore2{
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+}
 @section rightpart{
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,13 +15,16 @@
 <table class="edit-table">
     <tr class="thead">
         <th>
-            @Html.DisplayNameFor(model => model.ProductName)
+            @Html.DisplayNameFor(model => Model.First().ProductName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PublishTime)
+            @Html.DisplayNameFor(model => Model.First().PublishTime)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ReadCount)
+            @Html.DisplayNameFor(model =>  Model.First().ReadCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => Model.First().Category.CategoryName)
         </th>
         <th></th>
     </tr>
@@ -36,6 +42,9 @@
                 @Html.DisplayFor(modelItem => item.ReadCount)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) 
                 @Html.ActionLink("Delete", "Delete", new { id = item.ProductId })
             </td>
@@ -43,6 +52,6 @@
     }
 
 </table>
-
+    @Html.PagedListPager(Model,page=>Url.Action("Index",new {page}))
 }
 
