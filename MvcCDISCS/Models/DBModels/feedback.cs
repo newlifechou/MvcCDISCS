@@ -14,9 +14,11 @@ namespace MvcCDISCS.Models
         public int Id { get; set; }
         [Display(Name="标题")]
         [Required(ErrorMessage = "不能为空")]
+        [StringLength(15, ErrorMessage = "长度不能大于15")]
         public string Title { get; set; }
         [Required(ErrorMessage = "不能为空")]
         [Display(Name = "称呼")]
+        [StringLength(10, ErrorMessage = "长度不能大于10")]
         public string CustomerName { get; set; }
         [Required(ErrorMessage = "不能为空")]
         [Display(Name = "留言时间")]
