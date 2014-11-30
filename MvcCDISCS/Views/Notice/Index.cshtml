@@ -1,0 +1,57 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MvcCDISCS.Models.notice>
+
+@{
+    ViewBag.PageTitle = "Index";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+@section cssmore2{
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+}
+@section rightpart{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="edit-table">
+        <tr class="thead">
+            <th>
+               <p>@Html.DisplayNameFor(model => Model.First().NoticeContent)</p>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.First().CreateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.First().Priority)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => Model.First().IsShow)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <p>@Html.DisplayFor(modelItem => item.NoticeContent)</p>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Priority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsShow)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }));
+}
+

@@ -687,6 +687,10 @@
     <Content Include="Views\Slide\Index.cshtml" />
     <Content Include="Views\Slide\Create.cshtml" />
     <Content Include="Views\Slide\Edit.cshtml" />
+    <Content Include="Views\Notice\Index.cshtml" />
+    <Content Include="Views\Notice\Create.cshtml" />
+    <Content Include="Views\Notice\Edit.cshtml" />
+    <Content Include="Views\Notice\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

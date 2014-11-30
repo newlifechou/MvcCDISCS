@@ -1,0 +1,52 @@
+﻿@model MvcCDISCS.Models.notice
+
+@{
+    ViewBag.PageTitle = "Create";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+
+@section rightpart{
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>notice</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NoticeContent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NoticeContent)
+            @Html.ValidationMessageFor(model => model.NoticeContent)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Priority)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Priority)
+            @Html.ValidationMessageFor(model => model.Priority)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsShow)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsShow)
+            @Html.ValidationMessageFor(model => model.IsShow)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+}
+

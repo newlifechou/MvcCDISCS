@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcCDISCS.Models;
+using System.Data.Entity;
+using PagedList;
 
 namespace MvcCDISCS.Controllers
 {
@@ -13,9 +15,10 @@ namespace MvcCDISCS.Controllers
         //
         // GET: /Notice/
 
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            return View();
+            IPagedList<notice> notices = db.notice.Where(o => o.IsShow == true).OrderBy(o => o.Priority).ToPagedList(page, 10);
+            return View(notices);
         }
 
         //
@@ -38,17 +41,24 @@ namespace MvcCDISCS.Controllers
         // POST: /Notice/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult Create(notice notice)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                notice.CreateTime = DateTime.Now;
+                if (TryUpdateModel(notice))
+                {
+                    db.notice.Add(notice);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(notice);
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
 
@@ -57,24 +67,36 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            notice notice = db.notice.Find(id);
+            if (notice == null)
+            {
+                return HttpNotFound();
+            }
+            return View(notice);
         }
 
         //
         // POST: /Notice/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult Edit(notice notice)
         {
             try
             {
-                // TODO: Add update logic here
+                if (ModelState.IsValid)
+                {
+                    db.Entry(notice).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(notice);
 
-                return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
 
@@ -83,24 +105,36 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Delete(int id)
         {
-            return View();
+            notice notice = db.notice.Find(id);
+            if (notice == null)
+            {
+                return HttpNotFound();
+            }
+            return View(notice);
         }
 
         //
         // POST: /Notice/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                notice notice = db.notice.Find(id);
+                if (notice == null)
+                {
+                    return HttpNotFound();
+                }
+                db.notice.Remove(notice);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
         protected override void Dispose(bool disposing)
