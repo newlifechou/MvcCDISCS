@@ -21,7 +21,7 @@
 }
 @section rightpart{
     <p class="publishday">发布日期:@Model.PublishTime  阅读次数:@Model.ReadCount</p>
-    <div id="productdetailscontent">
+    <div id="productdetailscontent" class="htmlcontent">
         @Html.Raw(Model.Content)
     </div>
 }

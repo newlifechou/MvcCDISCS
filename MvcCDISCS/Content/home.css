@@ -173,22 +173,10 @@ ul.categorylist li {
 
 #about {
     background-color: white;
+    padding: 10px;
 }
 
-    #about > div {
-        padding: 10px;
-    }
 
-        #about > div img {
-            margin: 0 auto;
-            margin-bottom: 20px;
-        }
-
-        #about > div > div {
-            text-indent: 2em;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
 
 #productslide {
     padding: 15px 10px;

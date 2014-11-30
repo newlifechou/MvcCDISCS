@@ -19,7 +19,8 @@
     var h2 = $("div#about").height();
     var h3;
     if (h1 > h2) {
-        h3 = h1 - 6;
+        //补偿高度
+        h3 = h1 - 24;
     }
     else {
         h3 = h2;
