@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcCDISCS.Models;
 
 namespace MvcCDISCS.Controllers
 {
     public class CareerController : Controller
     {
+        CompanyContext db = new CompanyContext();
         //
         // GET: /Career/
 
@@ -100,6 +102,12 @@ namespace MvcCDISCS.Controllers
             {
                 return View();
             }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
         }
     }
 }
