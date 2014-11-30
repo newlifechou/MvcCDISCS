@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcCDISCS.Models;
+using System.Data.Entity;
 
 namespace MvcCDISCS.Controllers
 {
@@ -15,7 +16,8 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            List<productcategory> pclist = db.productcategory.ToList();
+            return View(pclist);
         }
 
         //
@@ -38,17 +40,21 @@ namespace MvcCDISCS.Controllers
         // POST: /ProductCategory/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(productcategory pc)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.productcategory.Add(pc);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(pc);
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
 
@@ -57,24 +63,34 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            productcategory pc = db.productcategory.Find(id);
+            if (pc == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pc);
         }
 
         //
         // POST: /ProductCategory/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(productcategory pc)
         {
             try
             {
-                // TODO: Add update logic here
+                if (ModelState.IsValid)
+                {
+                    db.Entry(pc).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
 
-                return RedirectToAction("Index");
+                return View(pc);
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
 
@@ -83,24 +99,34 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Delete(int id)
         {
-            return View();
+            productcategory pc = db.productcategory.Find(id);
+            if (pc == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pc);
         }
 
         //
         // POST: /ProductCategory/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                productcategory pc = db.productcategory.Find(id);
+                if (pc == null)
+                {
+                    return HttpNotFound();
+                }
+                db.productcategory.Remove(pc);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
         protected override void Dispose(bool disposing)

@@ -1,0 +1,59 @@
+﻿@model MvcCDISCS.Models.productcategory
+
+@{
+    ViewBag.PageTitle = "Create";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+@section rightpart{
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>productcategory</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CategoryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CategoryName)
+            @Html.ValidationMessageFor(model => model.CategoryName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Photo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Photo)
+            @Html.ValidationMessageFor(model => model.Photo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Memo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Memo)
+            @Html.ValidationMessageFor(model => model.Memo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Priority)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Priority)
+            @Html.ValidationMessageFor(model => model.Priority)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+}
+
+
