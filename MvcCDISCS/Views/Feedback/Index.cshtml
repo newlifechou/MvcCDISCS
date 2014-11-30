@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MvcCDISCS.Models.feedback>
+
+@{
+    ViewBag.PageTitle = "Index";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+@section rightpart{
+    <table class="edit-table">
+        <tr class="thead">
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeedbackTime)
+            </th>
+            <th> </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeedbackTime)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+

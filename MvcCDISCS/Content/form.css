@@ -38,7 +38,7 @@
 
 #rightpart textarea {
     font-family: inherit;
-    width:600px;
+    width: 600px;
     height: 150px;
 }
 
@@ -123,28 +123,35 @@
 }
 
 
-#rightpart table.tblist {
-    border-collapse: collapse;
+/*table*/
+#rightpart table.edit-table {
+    width: 100%;
 }
 
-    #rightpart table.tblist tr {
-        border-bottom: 1px solid #999;
+    #rightpart table.edit-table tr.thead {
+        background-color: lightblue;
     }
 
-        #rightpart table.tblist tr.mo {
-            background-color: lightblue;
+    #rightpart table.edit-table tr {
+    }
+
+        #rightpart table.edit-table tr.thead th, #rightpart table.edit-table td {
+            border: 1px solid #999;
+            padding: 2px 5px;
         }
 
-    #rightpart table.tblist td {
-        padding: 5px 10px;
-    }
+            #rightpart table.edit-table td a {
+                display: block;
+                float: left;
+                border: 1px solid #999;
+                border-radius: 3px;
+                padding: 2px 10px;
+                margin: 2px;
+                background-color: orange;
+                color: white;
+            }
 
-#rightpart table.tblist2 {
-    border-collapse: collapse;
-}
-
-    #rightpart table.tblist2 td {
-        border: 1px solid #999;
-        padding: 5px 10px;
-    <!-- } -->
-
+                #rightpart table.edit-table td a:hover {
+                    background-color: white;
+                    color: black;
+                }

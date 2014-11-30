@@ -1,0 +1,38 @@
+﻿@model MvcCDISCS.Models.feedback
+
+@{
+    ViewBag.PageTitle = "Details";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+@section rightpart{
+    <table class="edit-table">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Title)</td>
+            <td><p>@Html.DisplayFor(model => model.Title)</p></td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.CustomerName)</td>
+            <td><p>@Html.DisplayFor(model => model.CustomerName)</p></td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.FeedbackTime)</td>
+            <td>@Html.DisplayFor(model => model.FeedbackTime)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Email)</td>
+            <td>@Html.DisplayFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Phone)</td>
+            <td>@Html.DisplayFor(model => model.Phone)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Content)</td>
+            <td>@Html.DisplayFor(model => model.Content)</td>
+        </tr>
+    </table>
+
+    <p>
+        @Html.ActionLink("返回列表", "Index")
+    </p>
+}

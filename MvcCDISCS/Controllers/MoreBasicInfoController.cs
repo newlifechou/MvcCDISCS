@@ -40,7 +40,7 @@ namespace MvcCDISCS.Controllers
             }
             catch
             {
-                return View(mbi);
+                return HttpNotFound();
             }
         }
 

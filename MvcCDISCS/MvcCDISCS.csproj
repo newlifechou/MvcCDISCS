@@ -145,6 +145,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BasicInfoController.cs" />
+    <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoreBasicInfoController.cs" />
     <Compile Include="Controllers\PVController.cs" />
@@ -658,6 +659,9 @@
     <Content Include="Views\MoreBasicInfo\Edit.cshtml" />
     <Content Include="Views\Home\SearchProduct.cshtml" />
     <Content Include="Views\Home\SearchPage.cshtml" />
+    <Content Include="Views\Feedback\Index.cshtml" />
+    <Content Include="Views\Feedback\Details.cshtml" />
+    <Content Include="Views\Feedback\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
