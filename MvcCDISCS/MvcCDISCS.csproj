@@ -167,6 +167,10 @@
     <Compile Include="Migrations\201411300624185_changebasicinfo.Designer.cs">
       <DependentUpon>201411300624185_changebasicinfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411300713183_upbasicinfo.cs" />
+    <Compile Include="Migrations\201411300713183_upbasicinfo.Designer.cs">
+      <DependentUpon>201411300713183_upbasicinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DBModels\admin.cs">
       <SubType>Code</SubType>
@@ -668,6 +672,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201411300624185_changebasicinfo.resx">
       <DependentUpon>201411300624185_changebasicinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411300713183_upbasicinfo.resx">
+      <DependentUpon>201411300713183_upbasicinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
