@@ -79,7 +79,7 @@
     overflow: hidden;
     background-color: #FEFECC;
     border: 1px solid #FED22F;
-    border-radius:4px;
+    border-radius: 4px;
 }
 
     #notice p.noticeleft {
@@ -114,22 +114,6 @@
                     color: blue;
                 }
 
-h3.titleh3 {
-    background-color: #0767B2;
-    color: white;
-    font-size: 1.0em;
-    padding: 8px 12px;
-    margin-bottom: 5px;
-    border-width: 2px;
-    border-radius: 5px;
-}
-
-    h3.titleh3 span {
-        display: block;
-        float: right;
-        color: orange;
-    }
-
 /*middlearea*/
 #middlearea {
     margin-top: 10px;
@@ -145,6 +129,7 @@ ul.categorylist li {
     overflow: hidden;
     padding: 8px;
     margin-bottom: 5px;
+    background-color: white;
 }
 
     /*js mouseover style*/
@@ -187,6 +172,7 @@ ul.categorylist li {
 }
 
 #about {
+    background-color: white;
 }
 
     #about > div {

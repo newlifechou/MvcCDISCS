@@ -5,17 +5,18 @@
     Layout = "~/Views/Shared/_FrontEndContent.cshtml";
 }
 @section cssmore2{
-    <link href="~/Content/PagedList.css" rel="stylesheet"  type="text/css"/>
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/form.css" rel="stylesheet" type="text/css" />
 }
 @section leftpart{
     <div class="partmenu">
-        <h3>产品类别</h3>
+        <h3 class="titlebar">产品类别</h3>
         <ul>
             @Html.Action("GetProductCategoryMenu", "PV")
         </ul>
     </div>
     <div class="partmenu">
-        <h3>联系我们</h3>
+        <h3 class="titlebar">联系我们</h3>
         <ul>
             <li><a href="~/Home/Contact">联系方式</a></li>
             <li><a href="~/Home/Feedback">网上留言</a></li>
@@ -24,6 +25,10 @@
 }
 
 @section rightpart{
+    <!--searcharea-->
+    <div id="searcharea" class="roundborder">
+        <input type="text" value="" placeholder="可以在此输入你要搜索的产品关键词进行搜索" /><input type="button" value="搜索" />
+    </div>
     <div id="topcontent">
         <img src="~/Images/category/@(Model.pc.Photo).jpg" alt="@Model.pc.CategoryName" id="titleimg" class="smallphotobg" />
         <p>@Model.pc.Memo</p>
@@ -46,5 +51,5 @@
         }
     </div>
     <!--分页内容-->
-    @Html.PagedListPager(Model.products, page => Url.Action("ProductCategory", new { id=Model.pc.CategoryId,page}))
+    @Html.PagedListPager(Model.products, page => Url.Action("ProductCategory", new { id = Model.pc.CategoryId, page }))
 }

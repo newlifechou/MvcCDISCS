@@ -1,50 +1,70 @@
 ﻿/*front end unique style*/
 /*Category Top*/
+#rightpartcontent #searcharea {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+    #rightpartcontent #searcharea input {
+        font-size: 1em;
+    }
+
+        #rightpartcontent #searcharea input[type="text"] {
+            width: 400px;
+            margin-right: 20px;
+            color:#999;
+        }
+
+        #rightpartcontent #searcharea input[type="button"] {
+            padding: 5px 20px;
+        }
+
 #rightpartcontent #topcontent {
     overflow: hidden;
     border-bottom: 1px solid #999;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 
-   #rightpartcontent  #topcontent img#titleimg {
+    #rightpartcontent #topcontent img#titleimg {
         width: 250px;
         height: 180px;
         padding: 5px;
         float: left;
     }
 
-  div#rightpartcontent  div#topcontent p {
-        margin-left: 270px;
-    }
+div#rightpartcontent div#topcontent p {
+    margin-left: 270px;
+}
 
 /*Category Product List*/
 div#rightpartcontent div#productlist {
-    padding-top:10px;
+    padding-top: 10px;
     overflow: hidden;
 }
 
-    #rightpartcontent div#productlist a {
-        display: block;
-        float: left;
-        margin: 0 8px 10px 0;
-        padding: 5px;
-    }
+#rightpartcontent div#productlist a {
+    display: block;
+    float: left;
+    margin: 0 8px 10px 0;
+    padding: 5px;
+}
 
-        #rightpartcontent #productlist a:hover {
-            background-color: lightblue;
-        }
+#rightpartcontent #productlist a:hover {
+    background-color: lightblue;
+}
 
-        #rightpartcontent #productlist a img {
-            display: block;
-            width: 180px;
-            height: 130px;
-        }
+#rightpartcontent #productlist a img {
+    display: block;
+    width: 180px;
+    height: 130px;
+}
 
-        #rightpartcontent #productlist a p {
-            text-align: center;
-            padding: 5px 0;
-            background-color: #999;
-        }
+#rightpartcontent #productlist a p {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #999;
+}
 
 
 
@@ -63,35 +83,37 @@ div#rightpartcontent div#productlist {
 }
 
 /*Product*/
-#rightpartcontent .publishday{
-    color:orange;
+#rightpartcontent .publishday {
+    color: orange;
 }
+
 #rightpartcontent #productdetailscontent {
-    padding:10px 0;
+    padding: 10px 0;
     border-top: 1px solid #999;
 }
 
 /*Service*/
 #rightpartcontent .serviceitem {
     border: 1px solid #999;
+    border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
     overflow: hidden;
 }
 
-#rightpartcontent .serviceitem .serviceitemheader {
-    padding: 5px 0;
-    font-size: 1.2em;
-    border-bottom: 1px solid #999;
-}
+    #rightpartcontent .serviceitem .serviceitemheader {
+        padding: 5px 0;
+        font-size: 1.2em;
+        border-bottom: 1px solid #e4e4e4;
+    }
 
-#rightpartcontent .serviceitem .serviceitemphoto {
-    margin: 10px 0;
-    padding: 5px;
-    float: left;
-}
+    #rightpartcontent .serviceitem .serviceitemphoto {
+        margin: 10px 0;
+        padding: 5px;
+        float: left;
+    }
 
-#rightpartcontent .serviceitem .serviceitemcontent {
-    padding: 10px 0;
-    margin-left: 220px;
-}
+    #rightpartcontent .serviceitem .serviceitemcontent {
+        padding: 10px 0;
+        margin-left: 220px;
+    }
