@@ -15,7 +15,8 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            List<product> products = db.product.OrderByDescending(o => o.PublishTime).ToList();
+            return View(products);
         }
 
         //
