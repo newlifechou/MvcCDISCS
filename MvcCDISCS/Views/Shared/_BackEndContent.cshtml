@@ -17,7 +17,7 @@
 <!--leftpart menu-->
 <div id="leftpart">
     <div class="partmenu">
-        <h3>基本信息</h3>
+        <h3 class="titlebar">基本信息</h3>
         <ul>
             <li><a href="#">公司简介</a></li>
             <li><a href="#">公司管理</a></li>
@@ -26,7 +26,7 @@
         </ul>
     </div>
     <div class="partmenu">
-        <h3>其他信息</h3>
+        <h3 class="titlebar">其他信息</h3>
         <ul>
             <li><a href="#">公告编辑</a></li>
             <li><a href="#">联系方式</a></li>
@@ -34,7 +34,7 @@
         </ul>
     </div>
     <div class="partmenu">
-        <h3>产品信息</h3>
+        <h3 class="titlebar">产品信息</h3>
         <ul>
             <li><a href="#">产品种类</a></li>
             <li><a href="#">产品编辑</a></li>
@@ -43,13 +43,13 @@
         </ul>
     </div>
     <div class="partmenu">
-        <h3>其他管理</h3>
+        <h3 class="titlebar">其他管理</h3>
         <ul>
             <li><a href="#">在线留言</a></li>
         </ul>
     </div>
     <div class="partmenu">
-        <h3>退出登录</h3>
+        <h3 class="titlebar">退出登录</h3>
         <ul>
             <li><a href="~/Account/LogOut">确认退出</a></li>
         </ul>
@@ -59,9 +59,11 @@
 
 
 <!--right part content-->
-<div id="rightpart" class="roundborder">
-    <h2>@ViewBag.PageTitle</h2>
-    @RenderSection("rightpart")
+<div id="rightpart">
+    <h2 id="rightpartheader" class="titlebar">@ViewBag.PageTitle</h2>
+    <div id="rightpartcontent" class="rectborder">
+        @RenderSection("rightpart")
+    </div>
 </div>
 
 <!--scripts down here-->

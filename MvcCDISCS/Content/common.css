@@ -44,10 +44,9 @@
     min-height: 250px;
 }
 
-    #rightpart .rightpartheader {
+    #rightpart #rightpartheader {
         font-size: 1.2em;
         color: #0767B2;
-        margin-bottom: 5px;
     }
     /*rightpartheader*/
     #rightpart #rightpartheader, #rightpart #rightpartcontent {

@@ -30,7 +30,8 @@ namespace MvcCDISCS.Controllers
                 UserRepository ur = new UserRepository();
                 if (ur.ValidateUser(user.UserName, user.Password))
                 {
-                    FormsAuthentication.SetAuthCookie(user.UserName, false);
+                    //TODO:change it to false in the final
+                    FormsAuthentication.SetAuthCookie(user.UserName, true);
                     return RedirectToAction("Index", "Account");
                 }
                 else
