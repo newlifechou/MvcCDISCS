@@ -111,11 +111,13 @@ div#rightpartcontent div#productlist {
         margin: 10px 0;
         padding: 5px;
         float: left;
+        width:220px;
+        height:200px;
     }
 
     #rightpartcontent .serviceitem .serviceitemcontent {
         padding: 10px 0;
-        margin-left: 220px;
+        margin-left: 240px;
     }
 
 /*Feedback*/
