@@ -7,6 +7,8 @@
 @section cssmore{
     <link href="~/Content/common.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/backend.css" rel="stylesheet" type="text/css" />
+    <!--form css-->
+    <link href="~/Content/form.css" rel="stylesheet" />
     @RenderSection("cssmore2", required: false)
 }
 
@@ -29,7 +31,7 @@
         <h3 class="titlebar">其他信息</h3>
         <ul>
             <li><a href="#">公告编辑</a></li>
-            <li><a href="#">联系方式</a></li>
+            <li><a href="~/BasicInfo/Edit/1">联系方式</a></li>
             <li><a href="#">招聘信息</a></li>
         </ul>
     </div>
@@ -39,7 +41,6 @@
             <li><a href="#">产品种类</a></li>
             <li><a href="#">产品编辑</a></li>
             <li><a href="#">技术服务</a></li>
-            <li><a href="#">公司简介</a></li>
         </ul>
     </div>
     <div class="partmenu">

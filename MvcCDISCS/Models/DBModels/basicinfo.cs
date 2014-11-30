@@ -19,7 +19,7 @@ namespace MvcCDISCS.Models
         [StringLength(50, ErrorMessage = "长度不能大于50")]
         [Display(Name = "联系人员")]
         public string Contact { get; set; }
-        [StringLength(50, ErrorMessage = "长度不能大于80")]
+        [StringLength(80, ErrorMessage = "长度不能大于80")]
         [Display(Name = "联系电话")]
         public string Phone { get; set; }
         [StringLength(50, ErrorMessage = "长度不能大于50")]
@@ -28,7 +28,7 @@ namespace MvcCDISCS.Models
         [StringLength(50, ErrorMessage = "长度不能大于50")]
         [Display(Name = "传真号码")]
         public string Fax { get; set; }
-        [StringLength(50, ErrorMessage = "长度不能大于80")]
+        [StringLength(80, ErrorMessage = "长度不能大于80")]
         [Display(Name = "电子邮件")]
         public string Email { get; set; }
         [Display(Name = "公司地址")]

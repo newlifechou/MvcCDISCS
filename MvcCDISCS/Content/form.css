@@ -20,7 +20,6 @@
 
 #rightpart label {
     display: block;
-    font-size: 1.2em;
     font-weight: 600;
 }
 
@@ -32,10 +31,9 @@
     border: 1px solid #e2e2e2;
     background: #fff;
     color: #333;
-    font-size: 1.2em;
     margin: 5px 0 6px 0;
     padding: 5px;
-    width: 300px;
+    width: 400px;
 }
 
 #rightpart textarea {
@@ -60,7 +58,6 @@
     background-color: #d3dce0;
     border: 1px solid #787878;
     cursor: pointer;
-    font-size: 1.2em;
     font-weight: 600;
     padding: 7px;
     margin-right: 8px;
@@ -70,7 +67,6 @@
 #rightpart td input[type="submit"],
 #rightpart td input[type="button"],
 #rightpart td button {
-    font-size: 1em;
     padding: 4px;
     margin-right: 4px;
 }
@@ -85,14 +81,12 @@
 #rightpart .message-error {
     clear: both;
     color: #e80c4d;
-    font-size: 1.1em;
     font-weight: bold;
     margin: 20px 0 10px 0;
 }
 
 #rightpart .message-success {
     color: #7ac0da;
-    font-size: 1.3em;
     font-weight: bold;
     margin: 20px 0 10px 0;
 }
@@ -122,7 +116,6 @@
 #rightpart .validation-summary-errors {
     color: #e80c4d;
     font-weight: bold;
-    font-size: 1.1em;
 }
 
 #rightpart .validation-summary-valid {

@@ -143,6 +143,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BasicInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PVController.cs" />
     <Compile Include="Global.asax.cs">
@@ -159,6 +161,10 @@
     <Compile Include="Migrations\201411280847472_changeadmin.cs" />
     <Compile Include="Migrations\201411280847472_changeadmin.Designer.cs">
       <DependentUpon>201411280847472_changeadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411300624185_changebasicinfo.cs" />
+    <Compile Include="Migrations\201411300624185_changebasicinfo.Designer.cs">
+      <DependentUpon>201411300624185_changebasicinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DBModels\admin.cs">
@@ -635,6 +641,8 @@
     <Content Include="Views\Shared\_BackEndContent.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\CurrentUser.cshtml" />
+    <Content Include="Views\BasicInfo\Edit.cshtml" />
+    <Content Include="Views\Admin\EditSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -655,6 +663,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201411280847472_changeadmin.resx">
       <DependentUpon>201411280847472_changeadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411300624185_changebasicinfo.resx">
+      <DependentUpon>201411300624185_changebasicinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
