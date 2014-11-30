@@ -1,0 +1,27 @@
+﻿@model MvcCDISCS.Models.morebasicinfo
+@{
+    ViewBag.PageTitle = Model.ItemName;
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+
+@section rightpart{
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(o => o.Id)
+        <div class="editor-field">
+            @Html.EditorFor(o => o.ItemName)
+            @Html.ValidationMessageFor(o => o.ItemName)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(o => o.ItemContent)
+            <!--after the DOM load-->
+            <script>
+                var ue = UE.getEditor('ItemContent');
+            </script>
+        </div>
+        <p>
+            <input type="submit" value="保存" />
+        </p>
+    }
+}

@@ -10,6 +10,11 @@
     <!--form css-->
     <link href="~/Content/form.css" rel="stylesheet" />
     @RenderSection("cssmore2", required: false)
+    <!--add ueditor js-->
+    <script src="~/ueditor/ueditor.config.js"></script>
+    <script src="~/ueditor/ueditor.all.min.js"></script>
+    <script src="~/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="~/ueditor/ueditor.parse.min.js"></script>
 }
 
 <!--user status will be display here-->
@@ -21,10 +26,10 @@
     <div class="partmenu">
         <h3 class="titlebar">基本信息</h3>
         <ul>
-            <li><a href="#">公司简介</a></li>
-            <li><a href="#">公司管理</a></li>
-            <li><a href="#">公司发展</a></li>
-            <li><a href="#">荣誉资质</a></li>
+            <li><a href="~/MoreBasicInfo/Edit/1">公司简介</a></li>
+            <li><a href="~/MoreBasicInfo/Edit/2">公司管理</a></li>
+            <li><a href="~/MoreBasicInfo/Edit/3">发展历程</a></li>
+            <li><a href="~/MoreBasicInfo/Edit/4">荣誉资质</a></li>
         </ul>
     </div>
     <div class="partmenu">

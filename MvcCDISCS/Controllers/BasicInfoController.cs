@@ -16,10 +16,6 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Edit(int id = 1)
         {
-            if (id == null)
-            {
-                return HttpNotFound();
-            }
             basicinfo bi = db.basicinfo.Where(o => o.Id == id).Single();
             ViewBag.PageTitle = "联系方式";
             return View(bi);
@@ -29,6 +25,8 @@ namespace MvcCDISCS.Controllers
         // POST: /BasicInfo/Edit/5
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit(basicinfo bi)
         {
             try
