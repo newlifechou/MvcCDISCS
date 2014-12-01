@@ -22,7 +22,7 @@ namespace MvcCDISCS.Models
         [Display(Name = "招聘要求")]
         [Required(ErrorMessage = "不能为空")]
         public string Content { get; set; }
-        [Display(Name = "其他要求")]
+        [Display(Name = "其他信息")]
         public string Memo { get; set; }
         [Display(Name = "是否显示")]
         public bool IsShow { get; set; }

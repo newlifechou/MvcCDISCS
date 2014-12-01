@@ -17,7 +17,7 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Index(int page = 1)
         {
-            IPagedList<notice> notices = db.notice.Where(o => o.IsShow == true).OrderBy(o => o.Priority).ToPagedList(page, 10);
+            IPagedList<notice> notices = db.notice.OrderBy(o => o.Priority).ToPagedList(page, 10);
             return View(notices);
         }
 
