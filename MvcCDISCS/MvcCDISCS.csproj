@@ -692,6 +692,10 @@
     <Content Include="Views\Notice\Create.cshtml" />
     <Content Include="Views\Notice\Edit.cshtml" />
     <Content Include="Views\Notice\Delete.cshtml" />
+    <Content Include="Views\Career\Index.cshtml" />
+    <Content Include="Views\Career\Create.cshtml" />
+    <Content Include="Views\Career\Edit.cshtml" />
+    <Content Include="Views\Career\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcCDISCS.Models;
+using System.Data.Entity;
+using PagedList;
 
 namespace MvcCDISCS.Controllers
 {
@@ -13,9 +15,10 @@ namespace MvcCDISCS.Controllers
         //
         // GET: /Career/
 
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            return View();
+            IPagedList<career> careers = db.career.OrderByDescending(o => o.CreateTime).ToPagedList(page,10);
+            return View(careers);
         }
 
         //
@@ -38,17 +41,24 @@ namespace MvcCDISCS.Controllers
         // POST: /Career/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult Create(career career)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                career.CreateTime = DateTime.Now;
+                if (TryUpdateModel(career))
+                {
+                    db.career.Add(career);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(career);
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
 
@@ -57,24 +67,35 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            career career = db.career.Find(id);
+            if (career==null)
+            {
+                return HttpNotFound();
+            }
+            return View(career);
         }
 
         //
         // POST: /Career/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult Edit(career career)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Entry(career).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(career);
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
 
@@ -83,24 +104,36 @@ namespace MvcCDISCS.Controllers
 
         public ActionResult Delete(int id)
         {
-            return View();
+            career career = db.career.Find(id);
+            if (career == null)
+            {
+                return HttpNotFound();
+            }
+            return View(career);
         }
 
         //
         // POST: /Career/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost,ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                career career = db.career.Find(id);
+                if (career==null)
+                {
+                    return HttpNotFound();
+                }
+                db.career.Remove(career);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return HttpNotFound();
             }
         }
 

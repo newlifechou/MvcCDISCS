@@ -1,0 +1,64 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<MvcCDISCS.Models.career>
+
+@{
+    ViewBag.PageTitle = "Index";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+@section cssmore2{
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+}
+@section rightpart{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @if (Model.Count > 0)
+    {
+        <table class="edit-table">
+            <tr class="thead">
+                <th>
+                    @Html.DisplayNameFor(model => Model.First().Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model.First().CreateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model.First().ExpirationTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => Model.First().IsShow)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExpirationTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsShow)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+    }
+    else
+    {
+        <p>暂时没有内容</p>
+    }
+}
+
