@@ -1,8 +1,12 @@
-﻿@model MvcCDISCS.Models.morebasicinfo
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MvcCDISCS.Models.career>
 
 @{
-    ViewBag.PageTitle = Model.ItemName;
+    ViewBag.PageTitle = "Career";
     Layout = "~/Views/Shared/_FrontEndContent.cshtml";
+}
+@section cssmore2{
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 }
 @section leftpart{
     <div class="partmenu">
@@ -25,7 +29,18 @@
     </div>
 }
 @section rightpart{
-    <div class="htmlcontent">
-        @Html.Raw(Model.ItemContent)
+    <div>
+        @if (Model.Count > 0)
+        {
+            foreach (var item in Model)
+            {
+                <p class="listp"><a href="~/Home/CareerDetails/@(item.Id)">@Html.DisplayFor(o => item.Title)</a></p>
+            }
+            @Html.PagedListPager(Model, page => Url.Action("Career", new { page }))
+        }
+        else
+        {
+            <p>抱歉，暂时没有招聘信息~</p>
+        }
     </div>
 }

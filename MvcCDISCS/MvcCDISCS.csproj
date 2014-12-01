@@ -696,6 +696,8 @@
     <Content Include="Views\Career\Create.cshtml" />
     <Content Include="Views\Career\Edit.cshtml" />
     <Content Include="Views\Career\Delete.cshtml" />
+    <Content Include="Views\Home\Career.cshtml" />
+    <Content Include="Views\Home\CareerDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

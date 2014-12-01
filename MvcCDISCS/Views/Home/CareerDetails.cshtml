@@ -1,0 +1,52 @@
+﻿@model MvcCDISCS.Models.career
+@{
+    ViewBag.PageTitle = "CareerDetails";
+    Layout = "~/Views/Shared/_FrontEndContent.cshtml";
+}
+
+@section leftpart{
+    <div class="partmenu">
+        <h3 class="titlebar">关于我们</h3>
+        <ul>
+            <li><a href="~/Home/About/1">公司简介</a></li>
+            <li><a href="~/Home/About/2">公司管理</a></li>
+            <li><a href="~/Home/About/3">发展历程</a></li>
+            <li><a href="~/Home/About/4">荣誉资质</a></li>
+            <li><a href="~/Home/About/5">公司客户</a></li>
+            <li><a href="~/Home/Career">招聘信息</a></li>
+        </ul>
+    </div>
+    <div class="partmenu">
+        <h3 class="titlebar">联系我们</h3>
+        <ul>
+            <li><a href="~/Home/Contact">联系方式</a></li>
+            <li><a href="~/Home/Feedback">网上留言</a></li>
+        </ul>
+    </div>
+}
+@section rightpart{
+    <div class="htmlcontent">
+        <table class="details-table">
+            <tr>
+                <td class="tdhead">@Html.DisplayNameFor(o => o.Title)</td>
+                <td class="tdcotent">@Html.DisplayFor(o => o.Title)</td>
+            </tr>
+            <tr>
+                <td class="tdhead">@Html.DisplayNameFor(o => o.CreateTime)</td>
+                <td class="tdcotent">@Html.DisplayFor(o => o.CreateTime)</td>
+            </tr>
+            <tr>
+                <td class="tdhead">@Html.DisplayNameFor(o => o.ExpirationTime)</td>
+                <td class="tdcotent">@Html.DisplayFor(o => o.ExpirationTime)</td>
+            </tr>
+            <tr>
+                <td class="tdhead">@Html.DisplayNameFor(o => o.Content)</td>
+                <td class="tdcotent">@Html.Raw(Model.Content)</td>
+            </tr>
+            <tr>
+                <td class="tdhead">@Html.DisplayNameFor(o => o.Memo)</td>
+                <td class="tdcotent">@Html.Raw(Model.Memo)</td>
+            </tr>
+        </table>
+    </div>
+}

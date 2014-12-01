@@ -13,7 +13,7 @@
         #rightpartcontent #searcharea input[type="text"] {
             width: 400px;
             margin-right: 20px;
-            color:#999;
+            color: #999;
         }
 
         #rightpartcontent #searcharea input[type="submit"] {
@@ -64,7 +64,7 @@ div#rightpartcontent div#productlist {
     text-align: center;
     padding: 5px 0;
     background-color: #999;
-    font-size:0.8em;
+    font-size: 0.8em;
 }
 
 
@@ -112,8 +112,8 @@ div#rightpartcontent div#productlist {
         margin: 10px 0;
         padding: 5px;
         float: left;
-        width:220px;
-        height:200px;
+        width: 220px;
+        height: 200px;
     }
 
     #rightpartcontent .serviceitem .serviceitemcontent {
@@ -122,14 +122,38 @@ div#rightpartcontent div#productlist {
     }
 
 /*Feedback*/
-#rightpartcontent #feedbacktip{
-    margin-bottom:20px;
+#rightpartcontent #feedbacktip {
+    margin-bottom: 20px;
 }
 
 /*SearchPage*/
-#productsearchlist li{
-    padding:5px 0;
+#productsearchlist li {
+    padding: 5px 0;
 }
-#productsearchlist ul li a span{
-    color:blue
+
+#productsearchlist ul li a span {
+    color: blue;
 }
+
+
+
+/*career*/
+#rightpartcontent .listp {
+    padding: 5px;
+    border-bottom: 1px dashed #e4e4e4;
+}
+
+#rightpartcontent .details-table {
+    width: 100%;
+}
+
+    #rightpartcontent .details-table .tdhead {
+        width: 200px;
+        vertical-align: top;
+        color:#0767B2;
+    }
+
+    #rightpartcontent .details-table td {
+        border: 1px solid #999;
+        padding:5px;
+    }

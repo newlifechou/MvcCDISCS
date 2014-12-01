@@ -26,7 +26,7 @@ namespace MvcCDISCS.Controllers
             //get notice slide list
             hi.Notices = db.notice.Where(o => o.IsShow == true).OrderBy(o => o.Priority).ToList();
             //get productcategories,5 in count
-            hi.ProductCategories = db.productcategory.OrderBy(o=>o.Priority).Take(5).ToList();
+            hi.ProductCategories = db.productcategory.OrderBy(o => o.Priority).Take(5).ToList();
             //get the introduction
             hi.Introduction = db.morebasicinfo.Where(o => o.Id == 1).Single().ItemContent;
             return View(hi);
@@ -50,7 +50,7 @@ namespace MvcCDISCS.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult ProductCategory(int id = 0,int page=1)
+        public ActionResult ProductCategory(int id = 0, int page = 1)
         {
             if (id == 0)
             {
@@ -77,7 +77,7 @@ namespace MvcCDISCS.Controllers
         /// search product as required  for ajax use
         /// </summary>
         /// <returns></returns>
-        public ActionResult SearchProduct(string query,int page=1)
+        public ActionResult SearchProduct(string query, int page = 1)
         {
             ViewBag.QueryString = query;
             //如果查询字符串为null或者空，返回产品类别首页
@@ -113,7 +113,7 @@ namespace MvcCDISCS.Controllers
         [HttpPost]
         public ActionResult Feedback(feedback fb)
         {
-            if (fb==null)
+            if (fb == null)
             {
                 return HttpNotFound();
             }
@@ -155,6 +155,29 @@ namespace MvcCDISCS.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Career
+        /// </summary>
+        /// <param name="page"></param>
+        /// <returns></returns>
+        public ActionResult Career(int page = 1)
+        {
+            //只显示显示标示为true且没有过期的招聘信息
+            IPagedList<career> careers = db.career.Where(o => o.IsShow == true&&o.ExpirationTime>DateTime.Now).OrderByDescending(o => o.CreateTime).ToPagedList(page, 10);
+            return View(careers);
+        }
+        public ActionResult CareerDetails(int id)
+        {
+            career career = db.career.Find(id);
+            if (career==null)
+            {
+                return HttpNotFound();
+            }
+            return View(career);
+        }
+
+
 
         protected override void Dispose(bool disposing)
         {
