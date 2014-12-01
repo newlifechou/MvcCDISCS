@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="xs.zhou" />
+    <meta name="description" content="The description of my page" />
     <!--designed by xs.zhou-->
     <!--email:newlifecou@outlook.com-->
     <!--2014-11-25-->
@@ -11,9 +12,15 @@
     @Styles.Render("~/Content/css")
     <!--load more css here-->
     @RenderSection("cssmore", required: false)
-    <meta name="description" content="The description of my page" />
 </head>
 <body>
+    <!--top head-->
+    @if (Request.IsAuthenticated)
+    {
+        <div id="be-userstatus">
+            @(Html.Action("CurrentUser", "Account"))
+        </div>
+    }
     <!--header-->
     <div id="header">
         <div class="wraper wraperheader">
@@ -32,7 +39,6 @@
         <div class="wraper mainbody">
             <!--slide-->
             @RenderSection("slide", required: false)
-
             <!--mainbody-->
             @RenderBody()
         </div>

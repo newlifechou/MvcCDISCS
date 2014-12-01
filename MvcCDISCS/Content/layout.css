@@ -67,6 +67,20 @@ body {
 }
 
 
+/*Login Header-user status part*/
+#be-userstatus {
+    padding: 5px 10px;
+    background-color: #FEFECC;
+}
+
+    #be-userstatus span {
+        color: blue;
+    }
+    #be-userstatus a{
+        color:blue;
+        text-decoration:underline;
+    }
+
 /*header部分设置*/
 #header {
     background-color: #0767B2;
@@ -158,7 +172,7 @@ ul#mainnav {
     /*color:#0767B2;*/
     padding: 8px;
     border-radius: 4px;
-    font-size:1.1em;
+    font-size: 1.1em;
 }
 
     .titlebar span {
