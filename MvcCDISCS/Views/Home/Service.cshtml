@@ -22,7 +22,7 @@
                     <h5 class="serviceitemheader">@item.Title</h5>
                     <img src="~/Images/service/@(item.Photo).jpg" alt="service" class="serviceitemphoto smallphotobg"/>
                     <div class="serviceitemcontent htmlcontent">
-                        @item.Content
+                        @Html.Raw(item.Content)
                     </div>
                 </div>
             }

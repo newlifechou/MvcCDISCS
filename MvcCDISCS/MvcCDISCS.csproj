@@ -147,6 +147,7 @@
     <Compile Include="Controllers\BasicInfoController.cs" />
     <Compile Include="Controllers\CareerController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
+    <Compile Include="Controllers\FriendLinkController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoreBasicInfoController.cs" />
     <Compile Include="Controllers\NoticeController.cs" />

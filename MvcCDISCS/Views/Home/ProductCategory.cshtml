@@ -33,7 +33,7 @@
 @section rightpart{
     <div id="topcontent">
         <img src="~/Images/category/@(Model.pc.Photo).jpg" alt="@Model.pc.CategoryName" id="titleimg" class="smallphotobg" />
-        <p>@Model.pc.Memo</p>
+        <p>@Html.Raw(Model.pc.Memo)</p>
     </div>
     <div id="productlist">
         <!--display the products under the category list-->
