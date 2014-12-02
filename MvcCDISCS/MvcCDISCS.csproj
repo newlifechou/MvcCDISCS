@@ -324,6 +324,7 @@
     <Content Include="Images\icon\idea-32px.png" />
     <Content Include="Images\icon\rightarrow-24px.png" />
     <Content Include="Images\icon\save-24px.png" />
+    <Content Include="Images\icon\search-24px.png" />
     <Content Include="Images\icon\warning.png" />
     <Content Include="Images\left-arrow.png" />
     <Content Include="Images\loading.gif" />

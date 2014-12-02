@@ -88,7 +88,11 @@
     padding-left: 30px;
     background: url("../Images/icon/save-24px.png") 10px center no-repeat;
 }
-
+#rightpartcontent .btnsearch {
+    width: 150px;
+    padding-left: 30px;
+    background: url("../Images/icon/search-24px.png") 10px center no-repeat;
+}
 /*a按钮的样式*/
 #rightpartcontent .btnadd {
     display:block;
