@@ -7,7 +7,7 @@
 
 @section rightpart{
     <p>
-        @Html.ActionLink("Create New", "Create",null, new { @class = "btnadd" })
+        @Html.ActionLink("新增", "Create",null, new { @class = "btnadd" })
     </p>
     <table class="edit-table">
         <tr class="thead">
@@ -30,9 +30,9 @@
                     @Html.DisplayFor(modelItem => item.Priority)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.CategoryId }, new { @class = "editdelete" })
+                    @Html.ActionLink("编辑", "Edit", new { id = item.CategoryId }, new { @class = "editdelete" })
                     <!--隐藏掉删除功能，防止犯错-->
-                    @*@Html.ActionLink("Delete", "Delete", new { id = item.CategoryId }, new { @class = "editdelete" })*@
+                    @*@Html.ActionLink("删除", "Delete", new { id = item.CategoryId }, new { @class = "editdelete" })*@
                 </td>
             </tr>
         }
