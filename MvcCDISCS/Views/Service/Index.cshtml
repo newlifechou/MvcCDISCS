@@ -6,7 +6,7 @@
 }
 
 @section rightpart{
-    <p>@Html.ActionLink("Create", "Create") </p>
+    <p>@Html.ActionLink("Create", "Create",null, new { @class = "btnadd" }) </p>
     <table class="edit-table">
         <tr class="thead">
             <th>
@@ -22,8 +22,8 @@
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "editdelete" }) 
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "editdelete" })
                 </td>
             </tr>
         }

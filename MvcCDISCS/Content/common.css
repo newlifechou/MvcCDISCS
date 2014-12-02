@@ -73,3 +73,34 @@
         padding-left: 20px;
         background: url('../Images/icon/idea-16px.png') center left no-repeat;
     }
+
+/*列表图标*/
+#rightpartcontent .listp {
+    padding: 5px;
+    border-bottom: 1px dashed #e4e4e4;
+    padding-left: 30px;
+    background: url("../Images/icon/rightarrow-24px.png") center left no-repeat;
+}
+
+/*Save按钮Input类型*/
+#rightpartcontent .btnsave {
+    width: 150px;
+    padding-left: 30px;
+    background: url("../Images/icon/save-24px.png") 10px center no-repeat;
+}
+
+/*a按钮的样式*/
+#rightpartcontent .btnadd {
+    display:block;
+    max-width:150px;
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+    #rightpartcontent .btnadd:hover {
+        background-color: orange;
+        color: white;
+    }

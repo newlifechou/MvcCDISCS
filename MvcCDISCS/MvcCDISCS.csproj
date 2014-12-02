@@ -319,8 +319,11 @@
     <Content Include="Images\category\categoryimage.jpg" />
     <Content Include="Images\cdiscs\map.png" />
     <Content Include="Images\icon\abouticon.png" />
+    <Content Include="Images\icon\edit.png" />
     <Content Include="Images\icon\idea-16px.png" />
     <Content Include="Images\icon\idea-32px.png" />
+    <Content Include="Images\icon\rightarrow-24px.png" />
+    <Content Include="Images\icon\save-24px.png" />
     <Content Include="Images\icon\warning.png" />
     <Content Include="Images\left-arrow.png" />
     <Content Include="Images\loading.gif" />
@@ -754,7 +757,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57723</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

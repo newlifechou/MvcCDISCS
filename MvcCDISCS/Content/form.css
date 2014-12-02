@@ -51,7 +51,7 @@
     border: inherit;
     width: auto;
 }
-
+/*按钮部分*/
 #rightpart input[type="submit"],
 #rightpart input[type="button"],
 #rightpart button {
@@ -61,8 +61,13 @@
     font-weight: 600;
     padding: 7px;
     margin-right: 8px;
-    width: auto;
 }
+
+    #rightpart input[type="submit"]:hover,
+    #rightpart input[type="button"]:hover,
+    #rightpart button:hover {
+        background-color: orange;
+    }
 
 #rightpart td input[type="submit"],
 #rightpart td input[type="button"],
@@ -70,6 +75,8 @@
     padding: 4px;
     margin-right: 4px;
 }
+
+
 
 /* info and errors */
 #rightpart .message-info {
@@ -140,21 +147,20 @@
             padding: 2px 5px;
         }
 
-            #rightpart table.edit-table td a {
+            #rightpart table.edit-table td .editdelete {
                 display: block;
                 float: left;
-                border: 1px solid #999;
-                border-radius: 3px;
-                padding: 2px 10px;
+                background-color: #d3dce0;
+                border: 1px solid #787878;
+                padding: 4px 10px;
                 margin: 2px;
-                background-color: orange;
-                color: white;
             }
 
-                #rightpart table.edit-table td a:hover {
-                    background-color: white;
-                    color: black;
+                #rightpart table.edit-table td .editdelete:hover {
+                    background-color: orange;
+                    color: white;
                 }
-                #rightpart table.edit-table td p{
-                    max-width:250px;
-                }
+
+            #rightpart table.edit-table td p {
+                max-width: 250px;
+            }

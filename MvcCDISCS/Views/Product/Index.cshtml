@@ -10,7 +10,7 @@
 }
 @section rightpart{
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create",null, new { @class = "btnadd" })
 </p>
 <table class="edit-table">
     <tr class="thead">
@@ -45,8 +45,8 @@
                 @Html.DisplayFor(modelItem => item.Category.CategoryName)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) 
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProductId })
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }, new { @class = "editdelete" }) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductId }, new { @class = "editdelete" })
             </td>
         </tr>
     }
