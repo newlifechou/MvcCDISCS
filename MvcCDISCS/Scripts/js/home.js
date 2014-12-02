@@ -54,7 +54,7 @@
             if (noticeindex == noticepage) {
                 noticeindex = 0;
             }
-        }, 6000);
+        }, 3000);
     }).trigger("mouseleave");
 
     function ShowNotice(noticeindex) {

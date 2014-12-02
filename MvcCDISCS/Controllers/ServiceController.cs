@@ -41,6 +41,8 @@ namespace MvcCDISCS.Controllers
         // POST: /Service/Create
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create(service service)
         {
             try
@@ -76,6 +78,8 @@ namespace MvcCDISCS.Controllers
         // POST: /Service/Edit/5
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit(service service)
         {
             try
