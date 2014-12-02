@@ -319,7 +319,8 @@
     <Content Include="Images\category\categoryimage.jpg" />
     <Content Include="Images\cdiscs\map.png" />
     <Content Include="Images\icon\abouticon.png" />
-    <Content Include="Images\icon\edit.png" />
+    <Content Include="Images\icon\edit-24px.png" />
+    <Content Include="Images\icon\email_green-24px.png" />
     <Content Include="Images\icon\idea-16px.png" />
     <Content Include="Images\icon\idea-32px.png" />
     <Content Include="Images\icon\rightarrow-24px.png" />

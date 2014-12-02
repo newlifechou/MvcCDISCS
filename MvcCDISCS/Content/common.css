@@ -93,7 +93,15 @@
     padding-left: 30px;
     background: url("../Images/icon/search-24px.png") 10px center no-repeat;
 }
-/*a按钮的样式*/
+
+#rightpartcontent .btnsubmit {
+    width: 150px;
+    padding-left: 30px;
+    background: url("../Images/icon/email_green-24px.png") 10px center no-repeat;
+}
+
+
+/*add按钮的样式*/
 #rightpartcontent .btnadd {
     display:block;
     max-width:150px;

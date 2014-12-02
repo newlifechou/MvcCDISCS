@@ -138,16 +138,12 @@ div#rightpartcontent div#productlist {
 
 
 /*career*/
-#rightpartcontent .listp {
-
-}
-
 #rightpartcontent .details-table {
     width: 100%;
 }
 
     #rightpartcontent .details-table .tdhead {
-        width: 200px;
+        width: 100px;
         vertical-align: top;
         color:#0767B2;
     }
