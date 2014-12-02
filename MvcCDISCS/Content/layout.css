@@ -120,12 +120,12 @@ ul#mainnav {
             /*font-weight: bold;*/
             color: white;
             display: block;
-            padding: 5px 15px;
+            padding: 5px 10px;
             margin-top: 10px;
             height: 37px;
             line-height: 37px;
             text-align: center;
-            margin-right: 10px;
+            margin-right: 5px;
         }
 
             ul#mainnav li a:hover {
