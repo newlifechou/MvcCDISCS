@@ -146,6 +146,7 @@ div#rightpartcontent div#productlist {
         width: 100px;
         vertical-align: top;
         color:#0767B2;
+        text-align:center;
     }
 
     #rightpartcontent .details-table td {
