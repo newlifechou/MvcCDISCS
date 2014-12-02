@@ -9,6 +9,7 @@ using PagedList;
 
 namespace MvcCDISCS.Controllers
 {
+    [Authorize]
     public class NoticeController : Controller
     {
         CompanyContext db = new CompanyContext();

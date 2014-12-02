@@ -8,6 +8,7 @@ using System.Data.Entity;
 
 namespace MvcCDISCS.Controllers
 {
+    [Authorize]
     public class ProductCategoryController : Controller
     {
         CompanyContext db = new CompanyContext();

@@ -9,6 +9,7 @@ using System.Data.Entity;
 
 namespace MvcCDISCS.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         CompanyContext db = new CompanyContext();

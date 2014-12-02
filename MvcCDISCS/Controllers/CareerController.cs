@@ -9,15 +9,16 @@ using PagedList;
 
 namespace MvcCDISCS.Controllers
 {
+    [Authorize]
     public class CareerController : Controller
     {
         CompanyContext db = new CompanyContext();
         //
         // GET: /Career/
 
-        public ActionResult Index(int page=1)
+        public ActionResult Index(int page = 1)
         {
-            IPagedList<career> careers = db.career.OrderByDescending(o => o.CreateTime).ToPagedList(page,10);
+            IPagedList<career> careers = db.career.OrderByDescending(o => o.CreateTime).ToPagedList(page, 10);
             return View(careers);
         }
 
@@ -68,7 +69,7 @@ namespace MvcCDISCS.Controllers
         public ActionResult Edit(int id)
         {
             career career = db.career.Find(id);
-            if (career==null)
+            if (career == null)
             {
                 return HttpNotFound();
             }
@@ -115,7 +116,7 @@ namespace MvcCDISCS.Controllers
         //
         // POST: /Career/Delete/5
 
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
         public ActionResult DeleteConfirmed(int id)
@@ -123,7 +124,7 @@ namespace MvcCDISCS.Controllers
             try
             {
                 career career = db.career.Find(id);
-                if (career==null)
+                if (career == null)
                 {
                     return HttpNotFound();
                 }

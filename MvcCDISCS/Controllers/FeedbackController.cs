@@ -7,6 +7,7 @@ using MvcCDISCS.Models;
 
 namespace MvcCDISCS.Controllers
 {
+    [Authorize]
     public class FeedbackController : Controller
     {
         CompanyContext db = new CompanyContext();
@@ -25,7 +26,7 @@ namespace MvcCDISCS.Controllers
         public ActionResult Details(int id)
         {
             feedback fb = db.feedback.Find(id);
-            if (fb==null)
+            if (fb == null)
             {
                 return HttpNotFound();
             }
@@ -59,7 +60,7 @@ namespace MvcCDISCS.Controllers
         //
         // GET: /Feedback/Delete/5
 
-        public ActionResult Delete(int id=0)
+        public ActionResult Delete(int id = 0)
         {
             feedback fb = db.feedback.Find(id);
             if (fb == null)
@@ -72,7 +73,7 @@ namespace MvcCDISCS.Controllers
         //
         // POST: /Feedback/Delete/5
 
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
             try
