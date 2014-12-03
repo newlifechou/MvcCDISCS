@@ -7,6 +7,7 @@ using MvcCDISCS.Models;
 using System.Threading;
 
 using PagedList;
+using System.Data.Entity;
 
 namespace MvcCDISCS.Controllers
 {
@@ -20,7 +21,7 @@ namespace MvcCDISCS.Controllers
         {
             HomeIndex hi = new HomeIndex();
             //get the pagetitle
-            hi.PageTitle = db.basicinfo.Single().CompanyName;
+            hi.PageTitle = db.basicinfo.Find(1).CompanyName;
             //get the slide list
             hi.Slides = db.flash.OrderBy(o => o.Priority).ToList();
             //get notice slide list
@@ -42,7 +43,7 @@ namespace MvcCDISCS.Controllers
             {
                 return HttpNotFound();
             }
-            morebasicinfo mbc = db.morebasicinfo.Where(o => o.Id == id).Single();
+            morebasicinfo mbc = db.morebasicinfo.Find(id);
             return View(mbc);
         }
         /// <summary>
@@ -98,7 +99,16 @@ namespace MvcCDISCS.Controllers
         /// <returns></returns>
         public ActionResult Product(int id = 0)
         {
-            product p = db.product.Where(o => o.ProductId == id).Single();
+            product p = db.product.Find(id);
+            if (p==null)
+            {
+                return HttpNotFound();
+            }
+            //read account +1
+            p.ReadCount++;
+            db.Entry(p).State = EntityState.Modified;
+            db.SaveChanges();
+
             return View(p);
         }
         /// <summary>
