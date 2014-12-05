@@ -49,8 +49,8 @@
 
                 /*for js mouseover*/
                 #slide ul.slidephoto li p.mo {
-                    background: rgba(255,255,255,0.6);
-                    color:black;
+                    background: rgba(0,0,0,0.6);
+                    color:orange;
                 }
 
     #slide ul.slideindicator {
