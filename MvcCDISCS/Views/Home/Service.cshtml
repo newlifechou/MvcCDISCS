@@ -14,21 +14,25 @@
 }
 
 @section rightpart{
-        @if (Model.Count() > 0)
+    @if (Model.Count() > 0)
+    {
+        foreach (var item in Model)
         {
-            foreach (var item in Model)
-            {
-                <div class="serviceitem">
-                    <h5 class="serviceitemheader">@item.Title</h5>
-                    <img src="~/Images/service/@(item.Photo).jpg" alt="service" class="serviceitemphoto smallphotobg"/>
-                    <div class="serviceitemcontent htmlcontent">
-                        @Html.Raw(item.Content)
-                    </div>
+            <div class="serviceitem">
+                <h5 class="serviceitemheader">@item.Title</h5>
+                <img src="~/Images/service/@(item.Photo).jpg" alt="service" class="serviceitemphoto smallphotobg" />
+                <div class="serviceitemcontent htmlcontent">
+                    @Html.Raw(item.Content)
                 </div>
-            }
+            </div>
         }
-        else
-        {
-            <p>暂时没有服务项目，敬请稍后</p>
-        }
+    }
+    else
+    {
+        <p>暂时没有服务项目，敬请稍后</p>
+    }
+}
+
+@section scripts2{
+    <script src="~/Scripts/js/service.js"></script>
 }

@@ -95,30 +95,35 @@ div#rightpartcontent div#productlist {
 
 /*Service*/
 #rightpartcontent .serviceitem {
-    border: 1px solid #999;
+    border: 2px solid #fff;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
     overflow: hidden;
 }
 
+    #rightpartcontent .serviceitem.mo {
+        border: 2px solid #999;
+        background-color:#f0f0f0;
+    }
+
     #rightpartcontent .serviceitem .serviceitemheader {
         padding: 5px 0;
         font-size: 1.2em;
-        border-bottom: 1px solid #e4e4e4;
+        border-bottom: 1px dotted #999;
     }
 
     #rightpartcontent .serviceitem .serviceitemphoto {
         margin: 10px 0;
         padding: 5px;
         float: left;
-        width: 220px;
+        width: 200px;
         height: 200px;
     }
 
     #rightpartcontent .serviceitem .serviceitemcontent {
         padding: 10px 0;
-        margin-left: 240px;
+        margin-left: 230px;
     }
 
 /*Feedback*/
@@ -145,11 +150,11 @@ div#rightpartcontent div#productlist {
     #rightpartcontent .details-table .tdhead {
         width: 100px;
         vertical-align: top;
-        color:#0767B2;
-        text-align:center;
+        color: #0767B2;
+        text-align: center;
     }
 
     #rightpartcontent .details-table td {
         border: 1px solid #e4e4e4;
-        padding:5px;
+        padding: 5px;
     }
