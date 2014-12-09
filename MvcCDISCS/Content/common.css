@@ -76,7 +76,7 @@
 
 /*列表图标*/
 #rightpartcontent .listp {
-    padding: 5px;
+    padding: 8px 0;
     border-bottom: 1px dashed #e4e4e4;
     padding-left: 30px;
     background: url("../Images/icon/rightarrow-24px.png") center left no-repeat;

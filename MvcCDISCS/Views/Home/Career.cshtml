@@ -34,7 +34,7 @@
         {
             foreach (var item in Model)
             {
-                <p class="listp"><a href="~/Home/CareerDetails/@(item.Id)">@Html.DisplayFor(o => item.Title)</a></p>
+                <p class="listp"><a href="~/Home/CareerDetails/@(item.Id)">@Html.DisplayFor(o => item.Title) [@(item.CreateTime)]</a></p>
             }
             @Html.PagedListPager(Model, page => Url.Action("Career", new { page }))
         }
