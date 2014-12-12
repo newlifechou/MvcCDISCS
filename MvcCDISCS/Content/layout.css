@@ -15,7 +15,7 @@ img /* img elements 图片元素 */ {
 }
 /** 设置默认字体 **/
 body, button, input, select, textarea {
-    font-family: "黑体","宋体",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "宋体",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
 }
 
