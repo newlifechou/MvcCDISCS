@@ -104,6 +104,8 @@ body {
     display: block;
     margin: 3px 0 3px 0;
     padding: 0;
+    height:62px;
+    width:361px;
 }
 
 ul#mainnav {
