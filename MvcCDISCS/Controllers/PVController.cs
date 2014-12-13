@@ -20,8 +20,11 @@ namespace MvcCDISCS.Controllers
         /// GetContact PartialView
         /// </summary>
         /// <returns></returns>
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult GetContact(string show = "no")
         {
+            Response.Cache.SetOmitVaryStar(true);
+
             basicinfo bi = db.basicinfo.Single();
             ViewBag.Show = show;
             return PartialView(bi);
@@ -31,8 +34,11 @@ namespace MvcCDISCS.Controllers
         /// GetFriendLink
         /// </summary>
         /// <returns></returns>
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult GetFriendLink()
         {
+            Response.Cache.SetOmitVaryStar(true);
+
             ViewBag.FriendLinkList = new SelectList(db.friendlink, "SiteUrl", "SiteName");
             return PartialView();
         }
@@ -40,9 +46,12 @@ namespace MvcCDISCS.Controllers
         /// GetProductCategoryMenu
         /// </summary>
         /// <returns></returns>
+        [OutputCache(Duration = 600, VaryByParam = "id")]
         public ActionResult GetProductCategoryMenu()
         {
-            List<productcategory> pc = db.productcategory.OrderBy(o=>o.Priority).ToList();
+            Response.Cache.SetOmitVaryStar(true);
+
+            List<productcategory> pc = db.productcategory.OrderBy(o => o.Priority).ToList();
             return PartialView(pc);
         }
 
