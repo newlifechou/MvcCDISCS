@@ -706,6 +706,7 @@
     <Content Include="Views\Career\Delete.cshtml" />
     <Content Include="Views\Home\Career.cshtml" />
     <Content Include="Views\Home\CareerDetails.cshtml" />
+    <Content Include="Views\Slide\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

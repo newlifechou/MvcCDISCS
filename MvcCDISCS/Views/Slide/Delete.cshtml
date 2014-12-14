@@ -1,0 +1,36 @@
+﻿@model MvcCDISCS.Models.flash
+
+@{
+    ViewBag.PageTitle = "Delete";
+    Layout = "~/Views/Shared/_BackEndContent.cshtml";
+}
+
+@section rightpart{
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>flash</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.SlidePhoto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SlidePhoto)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Memo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Memo)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="删除" class="btnsave" /> |
+        @Html.ActionLink("返回列表", "Index")
+    </p>
+}
+
+}
